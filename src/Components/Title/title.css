@@ -18,10 +18,21 @@
 .info_cima, .info_baixo{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .editar_nome{
-    width: 200px;
+    width: 25vh;
+}
+
+.h4_edit, .p_edit{
+    margin: 0px;
+}
+.p_edit{
+    margin-bottom: 10px;
+}
+.h4_edit{
+    margin-top: 10px;
 }
 
 
