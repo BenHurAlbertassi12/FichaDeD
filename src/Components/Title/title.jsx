@@ -61,6 +61,7 @@ export const Title = () => {
         <h3 onClick={() => toggleVisibility('nome')}>
           {isVisibleName ? nome : nome}
         </h3>
+        <p>Nome</p>
       </div>
       <div className='info_person'>
         <div className='info_cima'>
@@ -76,6 +77,7 @@ export const Title = () => {
             <h4 onClick={() => toggleVisibility('classeENivel')}>
               {isVisibleClasseENivel ? classeENivel : classeENivel}
             </h4>
+            <p>Classe e Nivel</p>
           </div>
           <div className='editar_nome'>
             {isVisibleAntecedentes && (
@@ -89,6 +91,7 @@ export const Title = () => {
             <h4 onClick={() => toggleVisibility('antecedentes')}>
               {isVisibleAntecedentes ? antecedentes : antecedentes}
             </h4>
+            <p>Antecedentes</p>
           </div>
           <div className='editar_nome'>
             {isVisibleNomeDoJogador && (
@@ -102,6 +105,7 @@ export const Title = () => {
             <h4 onClick={() => toggleVisibility('nomeDoJogador')}>
               {isVisibleNomeDoJogador ? nomeDoJogador : nomeDoJogador}
             </h4>
+            <p>Nome do Jogador</p>
           </div>
         </div>
         <div className='info_baixo'>
@@ -117,6 +121,7 @@ export const Title = () => {
             <h4 onClick={() => toggleVisibility('raca')}>
               {isVisibleRaca ? raca : raca}
             </h4>
+            <p>Raça</p>
           </div>
           <div className='editar_nome'>
             {isVisibleTendencia && (
@@ -130,6 +135,7 @@ export const Title = () => {
             <h4 onClick={() => toggleVisibility('tendencia')}>
               {isVisibleTendencia ? tendencia : tendencia}
             </h4>
+            <p>Tendência</p>
           </div>
           <div className='editar_nome'>
             {isVisiblePontosDeExperiencia && (
@@ -145,6 +151,7 @@ export const Title = () => {
                 ? pontosDeExperiencia
                 : pontosDeExperiencia}
             </h4>
+            <p>Pontos de Experiência</p>
           </div>
         </div>
       </div>

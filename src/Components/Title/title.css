@@ -20,8 +20,12 @@
     justify-content: space-around;
 }
 
+.editar_nome{
+    width: 200px;
+}
 
-.info_total_person, .info_name_person, .info_person, .info_cima, .info_baixo{
+
+.info_total_person, .info_name_person, .info_person, .info_cima, .info_baixo, .editar_nome{
     border: 1px solid black;
 }
 
