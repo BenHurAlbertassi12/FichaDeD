@@ -1,4 +1,24 @@
+.info_total_person{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+.info_person{
+    width: 45%;
+
+}
+.info_name_person{
+    width: 45%;
+}
+.info_cima, .info_baixo{
+    display: flex;
+    justify-content: space-around;
+}
 
 
 .info_total_person, .info_name_person, .info_person, .info_cima, .info_baixo{
