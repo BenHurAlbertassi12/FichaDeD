@@ -8,17 +8,24 @@ export const Title = () => {
   const [raca, setRaca] = useState('');
   const [tendencia, setTendencia] = useState('');
   const [pontosDeExperiencia, setPontosDeExperiencia] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
 
   return (
     <div>
       <div>
-        <input
-          type='text'
-          placeholder='Nome'
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-        />
-        {nome}
+        {isVisible && (
+          <input
+            type='text'
+            placeholder='Nome'
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+          />
+        )}
+        <p onClick={toggleVisibility}>{isVisible ? nome : nome}</p>
       </div>
       <div>
         <div>
