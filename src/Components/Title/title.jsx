@@ -11,31 +11,44 @@ export const Title = () => {
 
   const [isVisibleName, setIsVisibleName] = useState(true);
   const [isVisibleClasseENivel, setIsVisibleClasseENivel] = useState(true);
-  const [isVisibleantecedentes, setIsVisibleantecedentes] = useState(true);
-  const [isVisiblenomeDoJogador, setIsVisiblenomeDoJogador] = useState(true);
+  const [isVisibleAntecedentes, setIsVisibleAntecedentes] = useState(true);
+  const [isVisibleNomeDoJogador, setIsVisibleNomeDoJogador] = useState(true);
+  const [isVisibleRaca, setIsVisibleRaca] = useState(true);
+  const [isVisibleTendencia, setIsVisibleTendencia] = useState(true);
+  const [isVisiblePontosDeExperiencia, setIsVisiblePontosDeExperiencia] =
+    useState(true);
 
-
-
-  const toggleVisibilityName = () => {
-    setIsVisibleName(!isVisibleName);
+  const toggleVisibility = (field) => {
+    switch (field) {
+      case 'nome':
+        setIsVisibleName(!isVisibleName);
+        break;
+      case 'classeENivel':
+        setIsVisibleClasseENivel(!isVisibleClasseENivel);
+        break;
+      case 'antecedentes':
+        setIsVisibleAntecedentes(!isVisibleAntecedentes);
+        break;
+      case 'nomeDoJogador':
+        setIsVisibleNomeDoJogador(!isVisibleNomeDoJogador);
+        break;
+      case 'raca':
+        setIsVisibleRaca(!isVisibleRaca);
+        break;
+      case 'tendencia':
+        setIsVisibleTendencia(!isVisibleTendencia);
+        break;
+      case 'pontosDeExperiencia':
+        setIsVisiblePontosDeExperiencia(!isVisiblePontosDeExperiencia);
+        break;
+      default:
+        break;
+    }
   };
-
-  const toggleVisibilityClasseENivel = () => {
-    setIsVisibleClasseENivel(!isVisibleClasseENivel);
-  };
-
-  const toggleVisibilityAntecedentes = () => {
-    setIsVisibleantecedentes(!isVisibleantecedentes);
-  };
-
-  const toggleVisibilityNomeDoJogador = () => {
-    setIsVisiblenomeDoJogador(!isVisiblenomeDoJogador);
-  };
-
 
   return (
-    <div>
-      <div>
+    <div className='info_total_person'>
+      <div className='info_name_person'>
         {isVisibleName && (
           <input
             type='text'
@@ -44,58 +57,82 @@ export const Title = () => {
             onChange={(e) => setNome(e.target.value)}
           />
         )}
-        <p onClick={toggleVisibilityName}>{isVisibleName ? nome : nome}</p>
+        <p onClick={() => toggleVisibility('nome')}>
+          {isVisibleName ? nome : nome}
+        </p>
       </div>
-      <div>
-        <div>
+      <div className='info_person'>
+        <div className='info_cima'>
           {isVisibleClasseENivel && (
             <input
               type='text'
-              placeholder='Classe e Nivel'
+              placeholder='Classe e Nível'
               value={classeENivel}
               onChange={(e) => setClasseENivel(e.target.value)}
             />
           )}
-          <p onClick={toggleVisibilityClasseENivel}>
+          <p onClick={() => toggleVisibility('classeENivel')}>
             {isVisibleClasseENivel ? classeENivel : classeENivel}
           </p>
-          <input
-            type='text'
-            placeholder='Antecedentes'
-            value={antecedentes}
-            onChange={(e) => setAntecedentes(e.target.value)}
-          />
-          {antecedentes}
-          <input
-            type='text'
-            placeholder='Nome do Jogador'
-            value={nomeDoJogador}
-            onChange={(e) => setNomeDoJogador(e.target.value)}
-          />
-          {nomeDoJogador}
+          {isVisibleAntecedentes && (
+            <input
+              type='text'
+              placeholder='Antecedentes'
+              value={antecedentes}
+              onChange={(e) => setAntecedentes(e.target.value)}
+            />
+          )}
+          <p onClick={() => toggleVisibility('antecedentes')}>
+            {isVisibleAntecedentes ? antecedentes : antecedentes}
+          </p>
+          {isVisibleNomeDoJogador && (
+            <input
+              type='text'
+              placeholder='Nome do Jogador'
+              value={nomeDoJogador}
+              onChange={(e) => setNomeDoJogador(e.target.value)}
+            />
+          )}
+          <p onClick={() => toggleVisibility('nomeDoJogador')}>
+            {isVisibleNomeDoJogador ? nomeDoJogador : nomeDoJogador}
+          </p>
         </div>
-        <div>
-          <input
-            type='text'
-            placeholder='Raça'
-            value={raca}
-            onChange={(e) => setRaca(e.target.value)}
-          />
-          {raca}
-          <input
-            type='text'
-            placeholder='Tendência'
-            value={tendencia}
-            onChange={(e) => setTendencia(e.target.value)}
-          />
-          {tendencia}
-          <input
-            type='number'
-            placeholder='Pontos de Experiência'
-            value={pontosDeExperiencia}
-            onChange={(e) => setPontosDeExperiencia(e.target.value)}
-          />
-          {pontosDeExperiencia}
+        <div className='info_baixo'>
+          {isVisibleRaca && (
+            <input
+              type='text'
+              placeholder='Raça'
+              value={raca}
+              onChange={(e) => setRaca(e.target.value)}
+            />
+          )}
+          <p onClick={() => toggleVisibility('raca')}>
+            {isVisibleRaca ? raca : raca}
+          </p>
+          {isVisibleTendencia && (
+            <input
+              type='text'
+              placeholder='Tendência'
+              value={tendencia}
+              onChange={(e) => setTendencia(e.target.value)}
+            />
+          )}
+          <p onClick={() => toggleVisibility('tendencia')}>
+            {isVisibleTendencia ? tendencia : tendencia}
+          </p>
+          {isVisiblePontosDeExperiencia && (
+            <input
+              type='number'
+              placeholder='Pontos de Experiência'
+              value={pontosDeExperiencia}
+              onChange={(e) => setPontosDeExperiencia(e.target.value)}
+            />
+          )}
+          <p onClick={() => toggleVisibility('pontosDeExperiencia')}>
+            {isVisiblePontosDeExperiencia
+              ? pontosDeExperiencia
+              : pontosDeExperiencia}
+          </p>
         </div>
       </div>
     </div>
