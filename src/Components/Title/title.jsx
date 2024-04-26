@@ -58,23 +58,25 @@ export const Title = () => {
             onChange={(e) => setNome(e.target.value)}
           />
         )}
-        <p onClick={() => toggleVisibility('nome')}>
+        <h3 onClick={() => toggleVisibility('nome')}>
           {isVisibleName ? nome : nome}
-        </p>
+        </h3>
       </div>
       <div className='info_person'>
         <div className='info_cima'>
-          {isVisibleClasseENivel && (
-            <input
-              type='text'
-              placeholder='Classe e Nível'
-              value={classeENivel}
-              onChange={(e) => setClasseENivel(e.target.value)}
-            />
-          )}
-          <p onClick={() => toggleVisibility('classeENivel')}>
-            {isVisibleClasseENivel ? classeENivel : classeENivel}
-          </p>
+          <div className='editar_nome'>
+            {isVisibleClasseENivel && (
+              <input
+                type='text'
+                placeholder='Classe e Nível'
+                value={classeENivel}
+                onChange={(e) => setClasseENivel(e.target.value)}
+              />
+            )}
+            <h4 onClick={() => toggleVisibility('classeENivel')}>
+              {isVisibleClasseENivel ? classeENivel : classeENivel}
+            </h4>
+          </div>
           {isVisibleAntecedentes && (
             <input
               type='text'
@@ -83,9 +85,9 @@ export const Title = () => {
               onChange={(e) => setAntecedentes(e.target.value)}
             />
           )}
-          <p onClick={() => toggleVisibility('antecedentes')}>
+          <h4 onClick={() => toggleVisibility('antecedentes')}>
             {isVisibleAntecedentes ? antecedentes : antecedentes}
-          </p>
+          </h4>
           {isVisibleNomeDoJogador && (
             <input
               type='text'
@@ -94,9 +96,9 @@ export const Title = () => {
               onChange={(e) => setNomeDoJogador(e.target.value)}
             />
           )}
-          <p onClick={() => toggleVisibility('nomeDoJogador')}>
+          <h4 onClick={() => toggleVisibility('nomeDoJogador')}>
             {isVisibleNomeDoJogador ? nomeDoJogador : nomeDoJogador}
-          </p>
+          </h4>
         </div>
         <div className='info_baixo'>
           {isVisibleRaca && (
@@ -107,9 +109,9 @@ export const Title = () => {
               onChange={(e) => setRaca(e.target.value)}
             />
           )}
-          <p onClick={() => toggleVisibility('raca')}>
+          <h4 onClick={() => toggleVisibility('raca')}>
             {isVisibleRaca ? raca : raca}
-          </p>
+          </h4>
           {isVisibleTendencia && (
             <input
               type='text'
@@ -118,9 +120,9 @@ export const Title = () => {
               onChange={(e) => setTendencia(e.target.value)}
             />
           )}
-          <p onClick={() => toggleVisibility('tendencia')}>
+          <h4 onClick={() => toggleVisibility('tendencia')}>
             {isVisibleTendencia ? tendencia : tendencia}
-          </p>
+          </h4>
           {isVisiblePontosDeExperiencia && (
             <input
               type='number'
@@ -129,11 +131,11 @@ export const Title = () => {
               onChange={(e) => setPontosDeExperiencia(e.target.value)}
             />
           )}
-          <p onClick={() => toggleVisibility('pontosDeExperiencia')}>
+          <h4 onClick={() => toggleVisibility('pontosDeExperiencia')}>
             {isVisiblePontosDeExperiencia
               ? pontosDeExperiencia
               : pontosDeExperiencia}
-          </p>
+          </h4>
         </div>
       </div>
     </div>
