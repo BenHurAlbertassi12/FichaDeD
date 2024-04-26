@@ -8,16 +8,35 @@ export const Title = () => {
   const [raca, setRaca] = useState('');
   const [tendencia, setTendencia] = useState('');
   const [pontosDeExperiencia, setPontosDeExperiencia] = useState('');
-  const [isVisible, setIsVisible] = useState(false);
 
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
+  const [isVisibleName, setIsVisibleName] = useState(true);
+  const [isVisibleClasseENivel, setIsVisibleClasseENivel] = useState(true);
+  const [isVisibleantecedentes, setIsVisibleantecedentes] = useState(true);
+  const [isVisiblenomeDoJogador, setIsVisiblenomeDoJogador] = useState(true);
+
+
+
+  const toggleVisibilityName = () => {
+    setIsVisibleName(!isVisibleName);
   };
+
+  const toggleVisibilityClasseENivel = () => {
+    setIsVisibleClasseENivel(!isVisibleClasseENivel);
+  };
+
+  const toggleVisibilityAntecedentes = () => {
+    setIsVisibleantecedentes(!isVisibleantecedentes);
+  };
+
+  const toggleVisibilityNomeDoJogador = () => {
+    setIsVisiblenomeDoJogador(!isVisiblenomeDoJogador);
+  };
+
 
   return (
     <div>
       <div>
-        {isVisible && (
+        {isVisibleName && (
           <input
             type='text'
             placeholder='Nome'
@@ -25,17 +44,21 @@ export const Title = () => {
             onChange={(e) => setNome(e.target.value)}
           />
         )}
-        <p onClick={toggleVisibility}>{isVisible ? nome : nome}</p>
+        <p onClick={toggleVisibilityName}>{isVisibleName ? nome : nome}</p>
       </div>
       <div>
         <div>
-          <input
-            type='text'
-            placeholder='Classe e Nivel'
-            value={classeENivel}
-            onChange={(e) => setClasseENivel(e.target.value)}
-          />
-          {classeENivel}
+          {isVisibleClasseENivel && (
+            <input
+              type='text'
+              placeholder='Classe e Nivel'
+              value={classeENivel}
+              onChange={(e) => setClasseENivel(e.target.value)}
+            />
+          )}
+          <p onClick={toggleVisibilityClasseENivel}>
+            {isVisibleClasseENivel ? classeENivel : classeENivel}
+          </p>
           <input
             type='text'
             placeholder='Antecedentes'
