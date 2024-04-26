@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './title.css'
 
 export const Title = () => {
   const [nome, setNome] = useState('');
