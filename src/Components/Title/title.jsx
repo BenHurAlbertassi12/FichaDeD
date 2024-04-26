@@ -58,9 +58,9 @@ export const Title = () => {
             onChange={(e) => setNome(e.target.value)}
           />
         )}
-        <h3 onClick={() => toggleVisibility('nome')}>
+        <h1 className='h4_edit' onClick={() => toggleVisibility('nome')}>
           {isVisibleName ? nome : nome}
-        </h3>
+        </h1>
         <p className='p_edit'>Nome</p>
       </div>
       <div className='info_person'>
@@ -74,9 +74,13 @@ export const Title = () => {
                 onChange={(e) => setClasseENivel(e.target.value)}
               />
             )}
-            <h4 className='h4_edit' onClick={() => toggleVisibility('classeENivel')}>
+            <h4
+              className='h4_edit'
+              onClick={() => toggleVisibility('classeENivel')}>
               {isVisibleClasseENivel ? classeENivel : classeENivel}
             </h4>
+            <hr className='hr_edit'/>
+            <hr className='hr_edit'/>
             <p className='p_edit'>Classe e Nivel</p>
           </div>
           <div className='editar_nome'>
@@ -88,9 +92,13 @@ export const Title = () => {
                 onChange={(e) => setAntecedentes(e.target.value)}
               />
             )}
-            <h4 className='h4_edit' onClick={() => toggleVisibility('antecedentes')}>
+            <h4
+              className='h4_edit'
+              onClick={() => toggleVisibility('antecedentes')}>
               {isVisibleAntecedentes ? antecedentes : antecedentes}
             </h4>
+            <hr className='hr_edit'/>
+            <hr className='hr_edit'/>
             <p className='p_edit'>Antecedentes</p>
           </div>
           <div className='editar_nome'>
@@ -102,9 +110,13 @@ export const Title = () => {
                 onChange={(e) => setNomeDoJogador(e.target.value)}
               />
             )}
-            <h4 className='h4_edit' onClick={() => toggleVisibility('nomeDoJogador')}>
+            <h4
+              className='h4_edit'
+              onClick={() => toggleVisibility('nomeDoJogador')}>
               {isVisibleNomeDoJogador ? nomeDoJogador : nomeDoJogador}
             </h4>
+            <hr className='hr_edit'/>
+            <hr className='hr_edit'/>
             <p className='p_edit'>Nome do Jogador</p>
           </div>
         </div>
@@ -121,6 +133,8 @@ export const Title = () => {
             <h4 className='h4_edit' onClick={() => toggleVisibility('raca')}>
               {isVisibleRaca ? raca : raca}
             </h4>
+            <hr className='hr_edit'/>
+            <hr className='hr_edit'/>
             <p className='p_edit'>Raça</p>
           </div>
           <div className='editar_nome'>
@@ -132,9 +146,13 @@ export const Title = () => {
                 onChange={(e) => setTendencia(e.target.value)}
               />
             )}
-            <h4 className='h4_edit' onClick={() => toggleVisibility('tendencia')}>
+            <h4
+              className='h4_edit'
+              onClick={() => toggleVisibility('tendencia')}>
               {isVisibleTendencia ? tendencia : tendencia}
             </h4>
+            <hr className='hr_edit'/>
+            <hr className='hr_edit'/>
             <p className='p_edit'>Tendência</p>
           </div>
           <div className='editar_nome'>
@@ -146,11 +164,15 @@ export const Title = () => {
                 onChange={(e) => setPontosDeExperiencia(e.target.value)}
               />
             )}
-            <h4 className='h4_edit' onClick={() => toggleVisibility('pontosDeExperiencia')}>
+            <h4
+              className='h4_edit'
+              onClick={() => toggleVisibility('pontosDeExperiencia')}>
               {isVisiblePontosDeExperiencia
                 ? pontosDeExperiencia
                 : pontosDeExperiencia}
             </h4>
+            <hr className='hr_edit'/>
+            <hr className='hr_edit'/>
             <p className='p_edit'>Pontos de Experiência</p>
           </div>
         </div>
