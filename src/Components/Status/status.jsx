@@ -8,6 +8,13 @@ export const Status = () => {
   const [inteligencia, setinteligencia] = useState('');
   const [sabedoria, setsabedoria] = useState('');
   const [carisma, setcarisma] = useState('');
+
+  const [forcaBonus, setForcaBonus] = useState('');
+  const [destrezaBonus, setdestrezaBonus] = useState('');
+  const [constituicaoBonus, setconstituicaoBonus] = useState('');
+  const [inteligenciaBonus, setinteligenciaBonus] = useState('');
+  const [sabedoriaBonus, setsabedoriaBonus] = useState('');
+  const [carismaBonus, setcarismaBonus] = useState('');    
     
   const [isForca, setIsForca] = useState(true);
   const [isDestreza, setIsDestreza] = useState(true);
@@ -47,15 +54,23 @@ export const Status = () => {
       <div>
         <p>Força</p>
         {isForca && (
-          <input
-          className='input_line'  
-          type='number'
-            value={forca}
-            onChange={(e) => setForca(e.target.value)}
-          />
+          <div>
+            <input
+              className='input_line'
+              type='number'
+              value={forca}
+              onChange={(e) => setForca(e.target.value)}
+            />
+            <input
+              className='input_line'
+              type='number'
+              value={forcaBonus}
+              onChange={(e) => setForcaBonus(e.target.value)}
+            />
+          </div>
         )}
         <p onClick={() => toggleVisibility('nome')}>
-          {isForca ? forca : forca}
+          {isForca ? forca : forca} <span className='bonus_atributo'>{forcaBonus}</span>
         </p>
       </div>
 
@@ -63,8 +78,8 @@ export const Status = () => {
         <p>Destreza</p>
         {isDestreza && (
           <input
-          className='input_line'  
-          type='number'
+            className='input_line'
+            type='number'
             value={destreza}
             onChange={(e) => setdestreza(e.target.value)}
           />
@@ -77,8 +92,8 @@ export const Status = () => {
         <p>Constituição</p>
         {isConstituicao && (
           <input
-          className='input_line'  
-          type='number'
+            className='input_line'
+            type='number'
             value={constituicao}
             onChange={(e) => setconstituicao(e.target.value)}
           />
@@ -91,8 +106,8 @@ export const Status = () => {
         <p>Inteligencia</p>
         {isInteligencia && (
           <input
-          className='input_line'  
-          type='number'
+            className='input_line'
+            type='number'
             value={inteligencia}
             onChange={(e) => setinteligencia(e.target.value)}
           />
@@ -105,8 +120,8 @@ export const Status = () => {
         <p>Sabedoria</p>
         {isSabedoria && (
           <input
-          className='input_line'  
-          type='number'
+            className='input_line'
+            type='number'
             value={sabedoria}
             onChange={(e) => setsabedoria(e.target.value)}
           />
@@ -119,8 +134,8 @@ export const Status = () => {
         <p>Carisma</p>
         {isCarisma && (
           <input
-          className='input_line'  
-          type='number'
+            className='input_line'
+            type='number'
             value={carisma}
             onChange={(e) => setcarisma(e.target.value)}
           />
