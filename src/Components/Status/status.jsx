@@ -7,6 +7,39 @@ export const Status = () => {
   const [inteligencia, setinteligencia] = useState('');
   const [sabedoria, setsabedoria] = useState('');
   const [carisma, setcarisma] = useState('');
+    
+  const [isForca, setIsForca] = useState(true);
+  const [isDestreza, setIsDestreza] = useState(true);
+  const [isConstituicao, setIsConstituicao] = useState(true);
+  const [isInteligencia, setIsInteligencia] = useState(true);
+  const [isSabedoria, setIsSabedoria] = useState(true);
+  const [isCarisma, setIsCarisma] = useState(true);
+
+  const toggleVisibility = (field) => {
+    switch (field) {
+      case 'nome':
+        setIsForca(!isForca);
+        break;
+      case 'classeENivel':
+        setIsDestreza(!isDestreza);
+        break;
+      case 'antecedentes':
+        setIsConstituicao(!isConstituicao);
+        break;
+      case 'nomeDoJogador':
+        setIsInteligencia(!isInteligencia);
+        break;
+      case 'raca':
+        setIsSabedoria(!isSabedoria);
+        break;
+      case 'tendencia':
+        setIsCarisma(!isCarisma);
+        break;
+      default:
+        break;
+    }
+  };
+
 
   return (
     <section>
