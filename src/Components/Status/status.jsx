@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './status.css'
+import './status.css';
 
 export const Status = () => {
   const [forca, setForca] = useState('');
@@ -14,8 +14,8 @@ export const Status = () => {
   const [constituicaoBonus, setconstituicaoBonus] = useState('');
   const [inteligenciaBonus, setinteligenciaBonus] = useState('');
   const [sabedoriaBonus, setsabedoriaBonus] = useState('');
-  const [carismaBonus, setcarismaBonus] = useState('');    
-    
+  const [carismaBonus, setcarismaBonus] = useState('');
+
   const [isForca, setIsForca] = useState(true);
   const [isDestreza, setIsDestreza] = useState(true);
   const [isConstituicao, setIsConstituicao] = useState(true);
@@ -48,7 +48,6 @@ export const Status = () => {
     }
   };
 
-
   return (
     <section>
       <div>
@@ -70,19 +69,22 @@ export const Status = () => {
           </div>
         )}
         <p onClick={() => toggleVisibility('nome')}>
-          {isForca ? forca : forca} <span className='bonus_atributo'>{forcaBonus}</span>
+          {isForca ? forca : forca}{' '}
+          <span className='bonus_atributo'>{forcaBonus}</span>
         </p>
       </div>
 
       <div>
         <h4>Destreza</h4>
         {isDestreza && (
-          <input
-            className='input_line'
-            type='number'
-            value={destreza}
-            onChange={(e) => setdestreza(e.target.value)}
-          />
+          <div>
+            <input
+              className='input_line'
+              type='number'
+              value={destreza}
+              onChange={(e) => setdestreza(e.target.value)}
+            />
+          </div>
         )}
         <p onClick={() => toggleVisibility('nome')}>
           {isDestreza ? destreza : destreza}
@@ -91,12 +93,14 @@ export const Status = () => {
       <div>
         <h4>Constituição</h4>
         {isConstituicao && (
-          <input
-            className='input_line'
-            type='number'
-            value={constituicao}
-            onChange={(e) => setconstituicao(e.target.value)}
-          />
+          <div>
+            <input
+              className='input_line'
+              type='number'
+              value={constituicao}
+              onChange={(e) => setconstituicao(e.target.value)}
+            />
+          </div>
         )}
         <p onClick={() => toggleVisibility('nome')}>
           {isConstituicao ? constituicao : constituicao}
@@ -105,12 +109,14 @@ export const Status = () => {
       <div>
         <h4>Inteligencia</h4>
         {isInteligencia && (
-          <input
-            className='input_line'
-            type='number'
-            value={inteligencia}
-            onChange={(e) => setinteligencia(e.target.value)}
-          />
+          <div>
+            <input
+              className='input_line'
+              type='number'
+              value={inteligencia}
+              onChange={(e) => setinteligencia(e.target.value)}
+            />
+          </div>
         )}
         <p onClick={() => toggleVisibility('nome')}>
           {isInteligencia ? inteligencia : inteligencia}
@@ -119,12 +125,14 @@ export const Status = () => {
       <div>
         <h4>Sabedoria</h4>
         {isSabedoria && (
-          <input
-            className='input_line'
-            type='number'
-            value={sabedoria}
-            onChange={(e) => setsabedoria(e.target.value)}
-          />
+          <div>
+            <input
+              className='input_line'
+              type='number'
+              value={sabedoria}
+              onChange={(e) => setsabedoria(e.target.value)}
+            />
+          </div>
         )}
         <p onClick={() => toggleVisibility('nome')}>
           {isSabedoria ? sabedoria : sabedoria}
@@ -133,12 +141,14 @@ export const Status = () => {
       <div>
         <h4>Carisma</h4>
         {isCarisma && (
-          <input
-            className='input_line'
-            type='number'
-            value={carisma}
-            onChange={(e) => setcarisma(e.target.value)}
-          />
+          <div>
+            <input
+              className='input_line'
+              type='number'
+              value={carisma}
+              onChange={(e) => setcarisma(e.target.value)}
+            />
+          </div>
         )}
         <p onClick={() => toggleVisibility('nome')}>
           {isCarisma ? carisma : carisma}
