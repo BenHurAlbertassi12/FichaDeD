@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './status.css'
 
 export const Status = () => {
   const [forca, setForca] = useState('');
@@ -45,11 +46,14 @@ export const Status = () => {
     <section>
       <div>
         <p>Força</p>
-        <input
+        {isForca && (
+          <input
+          className='input_line'  
           type='number'
-          value={forca}
-          onChange={(e) => setForca(e.target.value)}
-        />
+            value={forca}
+            onChange={(e) => setForca(e.target.value)}
+          />
+        )}
         <p onClick={() => toggleVisibility('nome')}>
           {isForca ? forca : forca}
         </p>
@@ -57,55 +61,70 @@ export const Status = () => {
 
       <div>
         <p>Destreza</p>
-        <input
+        {isDestreza && (
+          <input
+          className='input_line'  
           type='number'
-          value={destreza}
-          onChange={(e) => setdestreza(e.target.value)}
-        />
+            value={destreza}
+            onChange={(e) => setdestreza(e.target.value)}
+          />
+        )}
         <p onClick={() => toggleVisibility('nome')}>
           {isDestreza ? destreza : destreza}
         </p>
       </div>
       <div>
         <p>Constituição</p>
-        <input
+        {isConstituicao && (
+          <input
+          className='input_line'  
           type='number'
-          value={constituicao}
-          onChange={(e) => setconstituicao(e.target.value)}
-        />
+            value={constituicao}
+            onChange={(e) => setconstituicao(e.target.value)}
+          />
+        )}
         <p onClick={() => toggleVisibility('nome')}>
           {isConstituicao ? constituicao : constituicao}
         </p>
       </div>
       <div>
         <p>Inteligencia</p>
-        <input
+        {isInteligencia && (
+          <input
+          className='input_line'  
           type='number'
-          value={inteligencia}
-          onChange={(e) => setinteligencia(e.target.value)}
-        />
+            value={inteligencia}
+            onChange={(e) => setinteligencia(e.target.value)}
+          />
+        )}
         <p onClick={() => toggleVisibility('nome')}>
           {isInteligencia ? inteligencia : inteligencia}
         </p>
       </div>
       <div>
         <p>Sabedoria</p>
-        <input
+        {isSabedoria && (
+          <input
+          className='input_line'  
           type='number'
-          value={sabedoria}
-          onChange={(e) => setsabedoria(e.target.value)}
-        />
+            value={sabedoria}
+            onChange={(e) => setsabedoria(e.target.value)}
+          />
+        )}
         <p onClick={() => toggleVisibility('nome')}>
           {isSabedoria ? sabedoria : sabedoria}
         </p>
       </div>
       <div>
         <p>Carisma</p>
-        <input
+        {isCarisma && (
+          <input
+          className='input_line'  
           type='number'
-          value={carisma}
-          onChange={(e) => setcarisma(e.target.value)}
-        />
+            value={carisma}
+            onChange={(e) => setcarisma(e.target.value)}
+          />
+        )}
         <p onClick={() => toggleVisibility('nome')}>
           {isCarisma ? carisma : carisma}
         </p>
