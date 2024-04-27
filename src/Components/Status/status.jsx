@@ -83,8 +83,7 @@ export const Status = () => {
           {isForca ? forca : forca}{' '}
           <span className='bonus_atributo'>{forcaBonus}</span>
         </p>
-        <p className='num_mod'></p>{' '}
-        <p>{contarNumerosPares(forca, forcaBonus)}</p>
+        <p className='num_mod'>{contarNumerosPares(forca, forcaBonus)}</p>
       </div>
       <hr />
       <div className='mod_box'>
