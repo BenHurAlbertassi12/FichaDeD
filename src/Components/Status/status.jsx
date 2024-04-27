@@ -61,7 +61,7 @@ export const Status = () => {
 
   return (
     <section className='mod_atributos'>
-      <div>
+      <div className='mod_box'>
         <h4>Força</h4>
         {isForca && (
           <div>
@@ -83,11 +83,11 @@ export const Status = () => {
           {isForca ? forca : forca}{' '}
           <span className='bonus_atributo'>{forcaBonus}</span>
         </p>
-  
-  <p className="num_mod">
-    </p>      <p>{contarNumerosPares(forca, forcaBonus)}</p>
-      <div>
+        <p className='num_mod'></p>{' '}
+        <p>{contarNumerosPares(forca, forcaBonus)}</p>
       </div>
+      <hr />
+      <div className='mod_box'>
         <h4>Destreza</h4>
         {isDestreza && (
           <div>
@@ -109,12 +109,10 @@ export const Status = () => {
           {isDestreza ? destreza : destreza}{' '}
           <span className='bonus_atributo'>{destrezaBonus}</span>
         </p>
-        <p className="num_mod">
-
-        {contarNumerosPares(destreza, destrezaBonus)}
-        </p>
+        <p className='num_mod'>{contarNumerosPares(destreza, destrezaBonus)}</p>
       </div>
-      <div>
+      <hr />
+      <div className='mod_box'>
         <h4>Constituição</h4>
         {isConstituicao && (
           <div>
@@ -136,12 +134,12 @@ export const Status = () => {
           {isConstituicao ? constituicao : constituicao}{' '}
           <span className='bonus_atributo'>{constituicaoBonus}</span>
         </p>
-        <p className="num_mod">
-
-        {contarNumerosPares(constituicao, constituicaoBonus)}
+        <p className='num_mod'>
+          {contarNumerosPares(constituicao, constituicaoBonus)}
         </p>
       </div>
-      <div>
+      <hr />
+      <div className='mod_box'>
         <h4>Inteligencia</h4>
         {isInteligencia && (
           <div>
@@ -163,12 +161,12 @@ export const Status = () => {
           {isInteligencia ? inteligencia : inteligencia}{' '}
           <span className='bonus_atributo'>{inteligenciaBonus}</span>
         </p>
-        <p className="num_mod">
-
-        {contarNumerosPares(inteligencia, inteligenciaBonus)}
+        <p className='num_mod'>
+          {contarNumerosPares(inteligencia, inteligenciaBonus)}
         </p>
       </div>
-      <div>
+      <hr />
+      <div className='mod_box'>
         <h4>Sabedoria</h4>
         {isSabedoria && (
           <div>
@@ -190,12 +188,12 @@ export const Status = () => {
           {isSabedoria ? sabedoria : sabedoria}{' '}
           <span className='bonus_atributo'>{sabedoriaBonus}</span>
         </p>
-        <p className="num_mod">
-
-        {contarNumerosPares(sabedoria, sabedoriaBonus)}
+        <p className='num_mod'>
+          {contarNumerosPares(sabedoria, sabedoriaBonus)}
         </p>
       </div>
-      <div>
+      <hr />
+      <div className='mod_box'>
         <h4>Carisma</h4>
         {isCarisma && (
           <div>
@@ -217,10 +215,7 @@ export const Status = () => {
           {isCarisma ? carisma : carisma}{' '}
           <span className='bonus_atributo'>{carismaBonus}</span>
         </p>
-        <p className="num_mod">
-
-        {contarNumerosPares(carisma, carismaBonus)}
-        </p>
+        <p className='num_mod'>{contarNumerosPares(carisma, carismaBonus)}</p>
       </div>
     </section>
   );
