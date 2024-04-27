@@ -62,7 +62,7 @@ export const Status = () => {
   return (
     <section className='mod_atributos'>
       <div className='mod_box'>
-        <h4>Força</h4>
+        <h4 className='mod_name'>Força</h4>
         {isForca && (
           <div>
             <input
@@ -88,7 +88,7 @@ export const Status = () => {
       </div>
       <hr />
       <div className='mod_box'>
-        <h4>Destreza</h4>
+        <h4 className='mod_name'>Destreza</h4>
         {isDestreza && (
           <div>
             <input
@@ -110,10 +110,10 @@ export const Status = () => {
           <span className='bonus_atributo'>{destrezaBonus}</span>
         </p>
         <p className='num_mod'>{contarNumerosPares(destreza, destrezaBonus)}</p>
-      </div>
+       </div>
       <hr />
       <div className='mod_box'>
-        <h4>Constituição</h4>
+        <h4 className='mod_name'>Constituição</h4>
         {isConstituicao && (
           <div>
             <input
@@ -137,10 +137,10 @@ export const Status = () => {
         <p className='num_mod'>
           {contarNumerosPares(constituicao, constituicaoBonus)}
         </p>
-      </div>
+       </div>
       <hr />
       <div className='mod_box'>
-        <h4>Inteligencia</h4>
+        <h4 className='mod_name'>Inteligencia</h4>
         {isInteligencia && (
           <div>
             <input
@@ -164,10 +164,10 @@ export const Status = () => {
         <p className='num_mod'>
           {contarNumerosPares(inteligencia, inteligenciaBonus)}
         </p>
-      </div>
+       </div>
       <hr />
       <div className='mod_box'>
-        <h4>Sabedoria</h4>
+        <h4 className='mod_name'>Sabedoria</h4>
         {isSabedoria && (
           <div>
             <input
@@ -191,10 +191,10 @@ export const Status = () => {
         <p className='num_mod'>
           {contarNumerosPares(sabedoria, sabedoriaBonus)}
         </p>
-      </div>
+       </div>
       <hr />
       <div className='mod_box'>
-        <h4>Carisma</h4>
+        <h4 className='mod_name'>Carisma</h4>
         {isCarisma && (
           <div>
             <input
@@ -216,7 +216,7 @@ export const Status = () => {
           <span className='bonus_atributo'>{carismaBonus}</span>
         </p>
         <p className='num_mod'>{contarNumerosPares(carisma, carismaBonus)}</p>
-      </div>
+       </div>
     </section>
   );
 };
