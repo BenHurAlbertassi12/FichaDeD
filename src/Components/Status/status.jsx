@@ -8,6 +8,7 @@ export const Status = () => {
   const [inteligencia, setInteligencia] = useState('');
   const [sabedoria, setSabedoria] = useState('');
   const [carisma, setCarisma] = useState('');
+  const [inspiracao, setInspiracao] = useState('');  
 
   const [forcaBonus, setForcaBonus] = useState('');
   const [destrezaBonus, setDestrezaBonus] = useState('');
@@ -22,9 +23,13 @@ export const Status = () => {
   const [isInteligencia, setIsInteligencia] = useState(true);
   const [isSabedoria, setIsSabedoria] = useState(true);
   const [isCarisma, setIsCarisma] = useState(true);
+  const [isInspiracao, setIsInspiracao] = useState(true);
 
   const toggleVisibility = (field) => {
     switch (field) {
+      case 'inspiracao':
+        setIsInspiracao(!isInspiracao);
+        break;
       case 'forca':
         setIsForca(!isForca);
         break;
@@ -60,163 +65,186 @@ export const Status = () => {
   };
 
   return (
-    <section className='mod_atributos'>
-      <div className='mod_box'>
-        <h4 className='mod_name'>Força</h4>
-        {isForca && (
-          <div>
-            <input
-              className='input_line'
-              type='number'
-              value={forca}
-              onChange={(e) => setForca(e.target.value)}
+    <div>
+      <section className='mod_atributos'>
+        <div className='mod_box'>
+          <h4 className='mod_name'>Força</h4>
+          {isForca && (
+            <div>
+              <input
+                className='input_line'
+                type='number'
+                value={forca}
+                onChange={(e) => setForca(e.target.value)}
+              />
+              <input
+                className='input_line'
+                type='number'
+                value={forcaBonus}
+                onChange={(e) => setForcaBonus(e.target.value)}
+              />
+            </div>
+          )}
+          <p className='p_atributo' onClick={() => toggleVisibility('forca')}>
+            {isForca ? forca : forca}{' '}
+            <span className='bonus_atributo'>{forcaBonus}</span>
+          </p>
+          <p className='num_mod'>{contarNumerosPares(forca, forcaBonus)}</p>
+        </div>
+        <hr />
+        <div className='mod_box'>
+          <h4 className='mod_name'>Destreza</h4>
+          {isDestreza && (
+            <div>
+              <input
+                className='input_line'
+                type='number'
+                value={destreza}
+                onChange={(e) => setDestreza(e.target.value)}
+              />
+              <input
+                className='input_line'
+                type='number'
+                value={destrezaBonus}
+                onChange={(e) => setDestrezaBonus(e.target.value)}
+              />
+            </div>
+          )}
+          <p
+            className='p_atributo'
+            onClick={() => toggleVisibility('destreza')}>
+            {isDestreza ? destreza : destreza}{' '}
+            <span className='bonus_atributo'>{destrezaBonus}</span>
+          </p>
+          <p className='num_mod'>
+            {contarNumerosPares(destreza, destrezaBonus)}
+          </p>
+        </div>
+        <hr />
+        <div className='mod_box'>
+          <h4 className='mod_name'>Constituição</h4>
+          {isConstituicao && (
+            <div>
+              <input
+                className='input_line'
+                type='number'
+                value={constituicao}
+                onChange={(e) => setConstituicao(e.target.value)}
+              />
+              <input
+                className='input_line'
+                type='number'
+                value={constituicaoBonus}
+                onChange={(e) => setConstituicaoBonus(e.target.value)}
+              />
+            </div>
+          )}
+          <p
+            className='p_atributo'
+            onClick={() => toggleVisibility('constituicao')}>
+            {isConstituicao ? constituicao : constituicao}{' '}
+            <span className='bonus_atributo'>{constituicaoBonus}</span>
+          </p>
+          <p className='num_mod'>
+            {contarNumerosPares(constituicao, constituicaoBonus)}
+          </p>
+        </div>
+        <hr />
+        <div className='mod_box'>
+          <h4 className='mod_name'>Inteligencia</h4>
+          {isInteligencia && (
+            <div>
+              <input
+                className='input_line'
+                type='number'
+                value={inteligencia}
+                onChange={(e) => setInteligencia(e.target.value)}
+              />
+              <input
+                className='input_line'
+                type='number'
+                value={inteligenciaBonus}
+                onChange={(e) => setInteligenciaBonus(e.target.value)}
+              />
+            </div>
+          )}
+          <p
+            className='p_atributo'
+            onClick={() => toggleVisibility('inteligencia')}>
+            {isInteligencia ? inteligencia : inteligencia}{' '}
+            <span className='bonus_atributo'>{inteligenciaBonus}</span>
+          </p>
+          <p className='num_mod'>
+            {contarNumerosPares(inteligencia, inteligenciaBonus)}
+          </p>
+        </div>
+        <hr />
+        <div className='mod_box'>
+          <h4 className='mod_name'>Sabedoria</h4>
+          {isSabedoria && (
+            <div>
+              <input
+                className='input_line'
+                type='number'
+                value={sabedoria}
+                onChange={(e) => setSabedoria(e.target.value)}
+              />
+              <input
+                className='input_line'
+                type='number'
+                value={sabedoriaBonus}
+                onChange={(e) => setSabedoriaBonus(e.target.value)}
+              />
+            </div>
+          )}
+          <p
+            className='p_atributo'
+            onClick={() => toggleVisibility('sabedoria')}>
+            {isSabedoria ? sabedoria : sabedoria}{' '}
+            <span className='bonus_atributo'>{sabedoriaBonus}</span>
+          </p>
+          <p className='num_mod'>
+            {contarNumerosPares(sabedoria, sabedoriaBonus)}
+          </p>
+        </div>
+        <hr />
+        <div className='mod_box'>
+          <h4 className='mod_name'>Carisma</h4>
+          {isCarisma && (
+            <div>
+              <input
+                className='input_line'
+                type='number'
+                value={carisma}
+                onChange={(e) => setCarisma(e.target.value)}
+              />
+              <input
+                className='input_line'
+                type='number'
+                value={carismaBonus}
+                onChange={(e) => setCarismaBonus(e.target.value)}
+              />
+            </div>
+          )}
+
+          <p className='p_atributo' onClick={() => toggleVisibility('carisma')}>
+            {isCarisma ? carisma : carisma}{' '}
+            <span className='bonus_atributo'>{carismaBonus}</span>
+          </p>
+          <p className='num_mod'>{contarNumerosPares(carisma, carismaBonus)}</p>
+        </div>
+      </section>
+      <section>
+        <div className='insp_div'>
+          <input
+            className='input_line'
+            type='number'
+            value={inspiracao}
+            onChange={(e) => setInspiracao(e.target.value)}
             />
-            <input
-              className='input_line'
-              type='number'
-              value={forcaBonus}
-              onChange={(e) => setForcaBonus(e.target.value)}
-            />
-          </div>
-        )}
-        <p className='p_atributo' onClick={() => toggleVisibility('forca')}>
-          {isForca ? forca : forca}{' '}
-          <span className='bonus_atributo'>{forcaBonus}</span>
-        </p>
-        <p className='num_mod'>{contarNumerosPares(forca, forcaBonus)}</p>
-      </div>
-      <hr />
-      <div className='mod_box'>
-        <h4 className='mod_name'>Destreza</h4>
-        {isDestreza && (
-          <div>
-            <input
-              className='input_line'
-              type='number'
-              value={destreza}
-              onChange={(e) => setDestreza(e.target.value)}
-            />
-            <input
-              className='input_line'
-              type='number'
-              value={destrezaBonus}
-              onChange={(e) => setDestrezaBonus(e.target.value)}
-            />
-          </div>
-        )}
-        <p className='p_atributo' onClick={() => toggleVisibility('destreza')}>
-          {isDestreza ? destreza : destreza}{' '}
-          <span className='bonus_atributo'>{destrezaBonus}</span>
-        </p>
-        <p className='num_mod'>{contarNumerosPares(destreza, destrezaBonus)}</p>
-      </div>
-      <hr />
-      <div className='mod_box'>
-        <h4 className='mod_name'>Constituição</h4>
-        {isConstituicao && (
-          <div>
-            <input
-              className='input_line'
-              type='number'
-              value={constituicao}
-              onChange={(e) => setConstituicao(e.target.value)}
-            />
-            <input
-              className='input_line'
-              type='number'
-              value={constituicaoBonus}
-              onChange={(e) => setConstituicaoBonus(e.target.value)}
-            />
-          </div>
-        )}
-        <p className='p_atributo' onClick={() => toggleVisibility('constituicao')}>
-          {isConstituicao ? constituicao : constituicao}{' '}
-          <span className='bonus_atributo'>{constituicaoBonus}</span>
-        </p>
-        <p className='num_mod'>
-          {contarNumerosPares(constituicao, constituicaoBonus)}
-        </p>
-      </div>
-      <hr />
-      <div className='mod_box'>
-        <h4 className='mod_name'>Inteligencia</h4>
-        {isInteligencia && (
-          <div>
-            <input
-              className='input_line'
-              type='number'
-              value={inteligencia}
-              onChange={(e) => setInteligencia(e.target.value)}
-            />
-            <input
-              className='input_line'
-              type='number'
-              value={inteligenciaBonus}
-              onChange={(e) => setInteligenciaBonus(e.target.value)}
-            />
-          </div>
-        )}
-        <p className='p_atributo' onClick={() => toggleVisibility('inteligencia')}>
-          {isInteligencia ? inteligencia : inteligencia}{' '}
-          <span className='bonus_atributo'>{inteligenciaBonus}</span>
-        </p>
-        <p className='num_mod'>
-          {contarNumerosPares(inteligencia, inteligenciaBonus)}
-        </p>
-      </div>
-      <hr />
-      <div className='mod_box'>
-        <h4 className='mod_name'>Sabedoria</h4>
-        {isSabedoria && (
-          <div>
-            <input
-              className='input_line'
-              type='number'
-              value={sabedoria}
-              onChange={(e) => setSabedoria(e.target.value)}
-            />
-            <input
-              className='input_line'
-              type='number'
-              value={sabedoriaBonus}
-              onChange={(e) => setSabedoriaBonus(e.target.value)}
-            />
-          </div>
-        )}
-        <p className='p_atributo' onClick={() => toggleVisibility('sabedoria')}>
-          {isSabedoria ? sabedoria : sabedoria}{' '}
-          <span className='bonus_atributo'>{sabedoriaBonus}</span>
-        </p>
-        <p className='num_mod'>
-          {contarNumerosPares(sabedoria, sabedoriaBonus)}
-        </p>
-      </div>
-      <hr />
-      <div className='mod_box'>
-        <h4 className='mod_name'>Carisma</h4>
-        {isCarisma && (
-          <div>
-            <input
-              className='input_line'
-              type='number'
-              value={carisma}
-              onChange={(e) => setCarisma(e.target.value)}
-            />
-            <input
-              className='input_line'
-              type='number'
-              value={carismaBonus}
-              onChange={(e) => setCarismaBonus(e.target.value)}
-            />
-          </div>
-        )}
-        
-        <p className='p_atributo' onClick={() => toggleVisibility('carisma')}>
-          {isCarisma ? carisma : carisma}{' '}
-        <span className='bonus_atributo'>{carismaBonus}</span>
-        </p>
-        <p className='num_mod'>{contarNumerosPares(carisma, carismaBonus)}</p> 
-      </div>
-    </section>
+            <p>Inspiração</p>
+        </div>
+      </section>
+    </div>
   );
 };
