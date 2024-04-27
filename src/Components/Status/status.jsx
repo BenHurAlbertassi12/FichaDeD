@@ -52,7 +52,7 @@ export const Status = () => {
   return (
     <section>
       <div>
-        <p>Força</p>
+        <h4>Força</h4>
         {isForca && (
           <div>
             <input
@@ -75,7 +75,7 @@ export const Status = () => {
       </div>
 
       <div>
-        <p>Destreza</p>
+        <h4>Destreza</h4>
         {isDestreza && (
           <input
             className='input_line'
@@ -89,7 +89,7 @@ export const Status = () => {
         </p>
       </div>
       <div>
-        <p>Constituição</p>
+        <h4>Constituição</h4>
         {isConstituicao && (
           <input
             className='input_line'
@@ -103,7 +103,7 @@ export const Status = () => {
         </p>
       </div>
       <div>
-        <p>Inteligencia</p>
+        <h4>Inteligencia</h4>
         {isInteligencia && (
           <input
             className='input_line'
@@ -117,7 +117,7 @@ export const Status = () => {
         </p>
       </div>
       <div>
-        <p>Sabedoria</p>
+        <h4>Sabedoria</h4>
         {isSabedoria && (
           <input
             className='input_line'
@@ -131,7 +131,7 @@ export const Status = () => {
         </p>
       </div>
       <div>
-        <p>Carisma</p>
+        <h4>Carisma</h4>
         {isCarisma && (
           <input
             className='input_line'
