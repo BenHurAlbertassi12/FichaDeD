@@ -49,8 +49,9 @@ align-content: center;
 }
 
 
-.info_total_person, .info_name_person, .info_person{
+.info_name_person{
     border: 1px solid black;
+    border-radius: 0px 25px 0px 25px;
 }
 
 
