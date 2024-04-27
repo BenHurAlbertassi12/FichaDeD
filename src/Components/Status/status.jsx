@@ -79,7 +79,7 @@ export const Status = () => {
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('forca')}>
+        <p className='p_atributo' onClick={() => toggleVisibility('forca')}>
           {isForca ? forca : forca}{' '}
           <span className='bonus_atributo'>{forcaBonus}</span>
         </p>
@@ -104,12 +104,12 @@ export const Status = () => {
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('destreza')}>
+        <p className='p_atributo' onClick={() => toggleVisibility('destreza')}>
           {isDestreza ? destreza : destreza}{' '}
           <span className='bonus_atributo'>{destrezaBonus}</span>
         </p>
         <p className='num_mod'>{contarNumerosPares(destreza, destrezaBonus)}</p>
-       </div>
+      </div>
       <hr />
       <div className='mod_box'>
         <h4 className='mod_name'>Constituição</h4>
@@ -129,14 +129,14 @@ export const Status = () => {
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('constituicao')}>
+        <p className='p_atributo' onClick={() => toggleVisibility('constituicao')}>
           {isConstituicao ? constituicao : constituicao}{' '}
           <span className='bonus_atributo'>{constituicaoBonus}</span>
         </p>
         <p className='num_mod'>
           {contarNumerosPares(constituicao, constituicaoBonus)}
         </p>
-       </div>
+      </div>
       <hr />
       <div className='mod_box'>
         <h4 className='mod_name'>Inteligencia</h4>
@@ -156,14 +156,14 @@ export const Status = () => {
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('inteligencia')}>
+        <p className='p_atributo' onClick={() => toggleVisibility('inteligencia')}>
           {isInteligencia ? inteligencia : inteligencia}{' '}
           <span className='bonus_atributo'>{inteligenciaBonus}</span>
         </p>
         <p className='num_mod'>
           {contarNumerosPares(inteligencia, inteligenciaBonus)}
         </p>
-       </div>
+      </div>
       <hr />
       <div className='mod_box'>
         <h4 className='mod_name'>Sabedoria</h4>
@@ -183,14 +183,14 @@ export const Status = () => {
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('sabedoria')}>
+        <p className='p_atributo' onClick={() => toggleVisibility('sabedoria')}>
           {isSabedoria ? sabedoria : sabedoria}{' '}
           <span className='bonus_atributo'>{sabedoriaBonus}</span>
         </p>
         <p className='num_mod'>
           {contarNumerosPares(sabedoria, sabedoriaBonus)}
         </p>
-       </div>
+      </div>
       <hr />
       <div className='mod_box'>
         <h4 className='mod_name'>Carisma</h4>
@@ -210,12 +210,13 @@ export const Status = () => {
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('carisma')}>
+        
+        <p className='p_atributo' onClick={() => toggleVisibility('carisma')}>
           {isCarisma ? carisma : carisma}{' '}
-          <span className='bonus_atributo'>{carismaBonus}</span>
+        <span className='bonus_atributo'>{carismaBonus}</span>
         </p>
-        <p className='num_mod'>{contarNumerosPares(carisma, carismaBonus)}</p>
-       </div>
+        <p className='num_mod'>{contarNumerosPares(carisma, carismaBonus)}</p> 
+      </div>
     </section>
   );
 };

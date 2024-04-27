@@ -1,3 +1,10 @@
+section {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 .input_line {
     width: 37px;
 }
@@ -12,13 +19,6 @@
 
 }
 
-.mod_box {
-    border-radius: 25px 0px 25px 0px;
-    -webkit-box-shadow: inset 0px 0px 70px -14px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: inset 0px 0px 70px -14px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0px 0px 70px -14px rgba(0, 0, 0, 0.3);
-}
-
 .mod_name {
     margin: 0px;
     padding: 5px;
@@ -27,9 +27,48 @@
     -moz-box-shadow: inset 0px 0px 70px -14px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0px 0px 70px -14px rgba(0, 0, 0, 0.3);
     color: antiquewhite;
-    border-radius: 25px 0px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
 }
 
-.num_mod{
- border: 1px black solid;
+.p_atributo {
+    font-size: 24px;
+
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}
+
+.bonus_atributo {
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.num_mod {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    color: antiquewhite;
+
+
+
+    border-radius: 25px 0px 25px 0px;
+    -webkit-box-shadow: inset 0px 0px 70px -14px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 0px 70px -14px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 70px -14px rgba(0, 0, 0, 0.3);
+
+    border-radius: 0px 0px 20px 20px;
+}
+
+.mod_box {
+    /* border: 1px rgb(153, 130, 114) solid; */
+    border-radius: 20px 20px 20px 20px;
+
+    box-shadow: inset 0px 0px 70px -14px rgb(153, 130, 114, 0.3)
 }
