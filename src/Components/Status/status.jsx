@@ -84,6 +84,12 @@ export const Status = () => {
               value={destreza}
               onChange={(e) => setdestreza(e.target.value)}
             />
+            <input
+              className='input_line'
+              type='number'
+              value={destreza}
+              onChange={(e) => setdestreza(e.target.value)}
+            />
           </div>
         )}
         <p onClick={() => toggleVisibility('nome')}>
@@ -99,6 +105,12 @@ export const Status = () => {
               type='number'
               value={constituicao}
               onChange={(e) => setconstituicao(e.target.value)}
+            />
+            <input
+              className='input_line'
+              type='number'
+              value={destreza}
+              onChange={(e) => setdestreza(e.target.value)}
             />
           </div>
         )}
@@ -116,6 +128,12 @@ export const Status = () => {
               value={inteligencia}
               onChange={(e) => setinteligencia(e.target.value)}
             />
+            <input
+              className='input_line'
+              type='number'
+              value={destreza}
+              onChange={(e) => setdestreza(e.target.value)}
+            />
           </div>
         )}
         <p onClick={() => toggleVisibility('nome')}>
@@ -132,6 +150,12 @@ export const Status = () => {
               value={sabedoria}
               onChange={(e) => setsabedoria(e.target.value)}
             />
+            <input
+              className='input_line'
+              type='number'
+              value={destreza}
+              onChange={(e) => setdestreza(e.target.value)}
+            />
           </div>
         )}
         <p onClick={() => toggleVisibility('nome')}>
@@ -147,6 +171,12 @@ export const Status = () => {
               type='number'
               value={carisma}
               onChange={(e) => setcarisma(e.target.value)}
+            />
+            <input
+              className='input_line'
+              type='number'
+              value={destreza}
+              onChange={(e) => setdestreza(e.target.value)}
             />
           </div>
         )}
