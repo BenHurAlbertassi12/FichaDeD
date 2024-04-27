@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export const Status = () => {
   const [forca, setForca] = useState('');
   const [destreza, setdestreza] = useState('');
-  const [constutuicao, setconstutuicao] = useState('');
+  const [constituicao, setconstituicao] = useState('');
   const [inteligencia, setinteligencia] = useState('');
   const [sabedoria, setsabedoria] = useState('');
   const [carisma, setcarisma] = useState('');
@@ -50,6 +50,9 @@ export const Status = () => {
           value={forca}
           onChange={(e) => setForca(e.target.value)}
         />
+        <p onClick={() => toggleVisibility('nome')}>
+          {isForca ? forca : forca}
+        </p>
       </div>
 
       <div>
@@ -59,14 +62,20 @@ export const Status = () => {
           value={destreza}
           onChange={(e) => setdestreza(e.target.value)}
         />
+        <p onClick={() => toggleVisibility('nome')}>
+          {isDestreza ? destreza : destreza}
+        </p>
       </div>
       <div>
         <p>Constituição</p>
         <input
           type='number'
-          value={constutuicao}
-          onChange={(e) => setconstutuicao(e.target.value)}
+          value={constituicao}
+          onChange={(e) => setconstituicao(e.target.value)}
         />
+        <p onClick={() => toggleVisibility('nome')}>
+          {isConstituicao ? constituicao : constituicao}
+        </p>
       </div>
       <div>
         <p>Inteligencia</p>
@@ -75,6 +84,9 @@ export const Status = () => {
           value={inteligencia}
           onChange={(e) => setinteligencia(e.target.value)}
         />
+        <p onClick={() => toggleVisibility('nome')}>
+          {isInteligencia ? inteligencia : inteligencia}
+        </p>
       </div>
       <div>
         <p>Sabedoria</p>
@@ -83,6 +95,9 @@ export const Status = () => {
           value={sabedoria}
           onChange={(e) => setsabedoria(e.target.value)}
         />
+        <p onClick={() => toggleVisibility('nome')}>
+          {isSabedoria ? sabedoria : sabedoria}
+        </p>
       </div>
       <div>
         <p>Carisma</p>
@@ -91,6 +106,9 @@ export const Status = () => {
           value={carisma}
           onChange={(e) => setcarisma(e.target.value)}
         />
+        <p onClick={() => toggleVisibility('nome')}>
+          {isCarisma ? carisma : carisma}
+        </p>
       </div>
     </section>
   );
