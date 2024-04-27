@@ -3,18 +3,18 @@ import './status.css';
 
 export const Status = () => {
   const [forca, setForca] = useState('');
-  const [destreza, setdestreza] = useState('');
-  const [constituicao, setconstituicao] = useState('');
-  const [inteligencia, setinteligencia] = useState('');
-  const [sabedoria, setsabedoria] = useState('');
-  const [carisma, setcarisma] = useState('');
+  const [destreza, setDestreza] = useState('');
+  const [constituicao, setConstituicao] = useState('');
+  const [inteligencia, setInteligencia] = useState('');
+  const [sabedoria, setSabedoria] = useState('');
+  const [carisma, setCarisma] = useState('');
 
   const [forcaBonus, setForcaBonus] = useState('');
-  const [destrezaBonus, setdestrezaBonus] = useState('');
-  const [constituicaoBonus, setconstituicaoBonus] = useState('');
-  const [inteligenciaBonus, setinteligenciaBonus] = useState('');
-  const [sabedoriaBonus, setsabedoriaBonus] = useState('');
-  const [carismaBonus, setcarismaBonus] = useState('');
+  const [destrezaBonus, setDestrezaBonus] = useState('');
+  const [constituicaoBonus, setConstituicaoBonus] = useState('');
+  const [inteligenciaBonus, setInteligenciaBonus] = useState('');
+  const [sabedoriaBonus, setSabedoriaBonus] = useState('');
+  const [carismaBonus, setCarismaBonus] = useState('');
 
   const [isForca, setIsForca] = useState(true);
   const [isDestreza, setIsDestreza] = useState(true);
@@ -25,27 +25,38 @@ export const Status = () => {
 
   const toggleVisibility = (field) => {
     switch (field) {
-      case 'nome':
+      case 'forca':
         setIsForca(!isForca);
         break;
-      case 'classeENivel':
+      case 'destreza':
         setIsDestreza(!isDestreza);
         break;
-      case 'antecedentes':
+      case 'constituicao':
         setIsConstituicao(!isConstituicao);
         break;
-      case 'nomeDoJogador':
+      case 'inteligencia':
         setIsInteligencia(!isInteligencia);
         break;
-      case 'raca':
+      case 'sabedoria':
         setIsSabedoria(!isSabedoria);
         break;
-      case 'tendencia':
+      case 'carisma':
         setIsCarisma(!isCarisma);
         break;
       default:
         break;
     }
+  };
+
+  const contarNumerosPares = (valor, bonus) => {
+    const total = Number(valor) + Number(bonus);
+    let count = -6;
+    for (let i = 0; i <= total; i++) {
+      if (i % 2 === 0) {
+        count++;
+      }
+    }
+    return count;
   };
 
   return (
@@ -68,12 +79,14 @@ export const Status = () => {
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('nome')}>
+        <p onClick={() => toggleVisibility('forca')}>
           {isForca ? forca : forca}{' '}
           <span className='bonus_atributo'>{forcaBonus}</span>
         </p>
+        <p>
+          {contarNumerosPares(forca, forcaBonus)}
+        </p>
       </div>
-
       <div>
         <h4>Destreza</h4>
         {isDestreza && (
@@ -82,18 +95,19 @@ export const Status = () => {
               className='input_line'
               type='number'
               value={destreza}
-              onChange={(e) => setdestreza(e.target.value)}
+              onChange={(e) => setDestreza(e.target.value)}
             />
             <input
               className='input_line'
               type='number'
-              value={destreza}
-              onChange={(e) => setdestreza(e.target.value)}
+              value={destrezaBonus}
+              onChange={(e) => setDestrezaBonus(e.target.value)}
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('nome')}>
-          {isDestreza ? destreza : destreza}
+        <p onClick={() => toggleVisibility('destreza')}>
+          {isDestreza ? destreza : destreza}{' '}
+          <span className='bonus_atributo'>{destrezaBonus}</span>
         </p>
       </div>
       <div>
@@ -104,19 +118,21 @@ export const Status = () => {
               className='input_line'
               type='number'
               value={constituicao}
-              onChange={(e) => setconstituicao(e.target.value)}
+              onChange={(e) => setConstituicao(e.target.value)}
             />
             <input
               className='input_line'
               type='number'
-              value={destreza}
-              onChange={(e) => setdestreza(e.target.value)}
+              value={constituicaoBonus}
+              onChange={(e) => setConstituicaoBonus(e.target.value)}
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('nome')}>
-          {isConstituicao ? constituicao : constituicao}
+        <p onClick={() => toggleVisibility('constituicao')}>
+          {isConstituicao ? constituicao : constituicao}{' '}
+          <span className='bonus_atributo'>{constituicaoBonus}</span>
         </p>
+        <p></p>
       </div>
       <div>
         <h4>Inteligencia</h4>
@@ -126,18 +142,19 @@ export const Status = () => {
               className='input_line'
               type='number'
               value={inteligencia}
-              onChange={(e) => setinteligencia(e.target.value)}
+              onChange={(e) => setInteligencia(e.target.value)}
             />
             <input
               className='input_line'
               type='number'
-              value={destreza}
-              onChange={(e) => setdestreza(e.target.value)}
+              value={inteligenciaBonus}
+              onChange={(e) => setInteligenciaBonus(e.target.value)}
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('nome')}>
-          {isInteligencia ? inteligencia : inteligencia}
+        <p onClick={() => toggleVisibility('inteligencia')}>
+          {isInteligencia ? inteligencia : inteligencia}{' '}
+          <span className='bonus_atributo'>{inteligenciaBonus}</span>
         </p>
       </div>
       <div>
@@ -148,18 +165,19 @@ export const Status = () => {
               className='input_line'
               type='number'
               value={sabedoria}
-              onChange={(e) => setsabedoria(e.target.value)}
+              onChange={(e) => setSabedoria(e.target.value)}
             />
             <input
               className='input_line'
               type='number'
-              value={destreza}
-              onChange={(e) => setdestreza(e.target.value)}
+              value={sabedoriaBonus}
+              onChange={(e) => setSabedoriaBonus(e.target.value)}
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('nome')}>
-          {isSabedoria ? sabedoria : sabedoria}
+        <p onClick={() => toggleVisibility('sabedoria')}>
+          {isSabedoria ? sabedoria : sabedoria}{' '}
+          <span className='bonus_atributo'>{sabedoriaBonus}</span>
         </p>
       </div>
       <div>
@@ -170,18 +188,19 @@ export const Status = () => {
               className='input_line'
               type='number'
               value={carisma}
-              onChange={(e) => setcarisma(e.target.value)}
+              onChange={(e) => setCarisma(e.target.value)}
             />
             <input
               className='input_line'
               type='number'
-              value={destreza}
-              onChange={(e) => setdestreza(e.target.value)}
+              value={carismaBonus}
+              onChange={(e) => setCarismaBonus(e.target.value)}
             />
           </div>
         )}
-        <p onClick={() => toggleVisibility('nome')}>
-          {isCarisma ? carisma : carisma}
+        <p onClick={() => toggleVisibility('carisma')}>
+          {isCarisma ? carisma : carisma}{' '}
+          <span className='bonus_atributo'>{carismaBonus}</span>
         </p>
       </div>
     </section>
