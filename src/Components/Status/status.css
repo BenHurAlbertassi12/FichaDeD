@@ -100,3 +100,12 @@ border-radius: 0 10px 10px 0;
  border: 0px;
  margin: 0px;
 }
+
+.salva_pericia{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox_salvaguardaa{
+    display: flex;
+}
