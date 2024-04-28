@@ -8,7 +8,8 @@ export const Status = () => {
   const [inteligencia, setInteligencia] = useState('');
   const [sabedoria, setSabedoria] = useState('');
   const [carisma, setCarisma] = useState('');
-  const [inspiracao, setInspiracao] = useState('');  
+  const [inspiracao, setInspiracao] = useState('');
+  const [bonusProficiencia, setBonusProficiencia] = useState('');
 
   const [forcaBonus, setForcaBonus] = useState('');
   const [destrezaBonus, setDestrezaBonus] = useState('');
@@ -24,9 +25,13 @@ export const Status = () => {
   const [isSabedoria, setIsSabedoria] = useState(true);
   const [isCarisma, setIsCarisma] = useState(true);
   const [isInspiracao, setIsInspiracao] = useState(true);
+  const [isBonusProficiencia, setIsBonusProficiencia] = useState(true);
 
   const toggleVisibility = (field) => {
     switch (field) {
+      case 'bonusProficiencia':
+        setIsBonusProficiencia(!isBonusProficiencia);
+        break;
       case 'inspiracao':
         setIsInspiracao(!isInspiracao);
         break;
@@ -65,7 +70,7 @@ export const Status = () => {
   };
 
   return (
-    <div>
+    <div className='distr'>
       <section className='mod_atributos'>
         <div className='mod_box'>
           <h4 className='mod_name'>Força</h4>
@@ -236,13 +241,42 @@ export const Status = () => {
       </section>
       <section>
         <div className='insp_div'>
-          <input
-            className='input_line'
-            type='number'
-            value={inspiracao}
-            onChange={(e) => setInspiracao(e.target.value)}
-            />
-            <p>Inspiração</p>
+          <div className='div_inspiracao'>
+            {isInspiracao && (
+              <>
+                <input
+                  className='input_line_insp'
+                  type='number'
+                  value={inspiracao}
+                  onChange={(e) => setInspiracao(e.target.value)}
+                />
+              </>
+            )}
+            <h2 className='' onClick={() => toggleVisibility('inspiracao')}>
+              {isInspiracao ? inspiracao : inspiracao}{' '}
+            </h2>
+          </div>
+          <p className='p_inspiracao'>Inspiração</p>
+        </div>
+        <div className='insp_div'>
+          <div className='div_inspiracao'>
+            {isBonusProficiencia && (
+              <>
+                <input
+                  className='input_line_insp'
+                  type='number'
+                  value={bonusProficiencia}
+                  onChange={(e) => setBonusProficiencia(e.target.value)}
+                />
+              </>
+            )}
+            <h2
+              className=''
+              onClick={() => toggleVisibility('bonusProficiencia')}>
+              {isBonusProficiencia ? bonusProficiencia : bonusProficiencia}{' '}
+            </h2>
+          </div>
+          <p className='p_inspiracao'>Bônus de proficiência</p>
         </div>
       </section>
     </div>
