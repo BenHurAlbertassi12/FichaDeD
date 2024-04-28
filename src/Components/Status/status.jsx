@@ -188,20 +188,32 @@ export const Status = () => {
             <p className='num_mod'>
               {contarNumerosPares(destreza, destrezaBonus)}
             </p>
-            <article>
+            <section className='salvaguarda_art' >
+              <article>
+
               <input
-                type='checkbox'
-                checked={checkboxDestreza}
-                onChange={() => setCheckboxDestreza(!checkboxDestreza)}
+              className='checkbox_style'
+              type='checkbox'
+              checked={checkboxDestreza}
+              onChange={() => setCheckboxDestreza(!checkboxDestreza)}
               />
               <p>
                 {checkboxDestreza
                   ? contarNumerosPares(destreza, destrezaBonus) +
-                    Number(bonusProficiencia)
+                  Number(bonusProficiencia)
                   : contarNumerosPares(destreza, destrezaBonus)}
               </p>
+                  </article>
+                  <article>
+                    <input 
+                    className='checkbox_proficiencia'
+                    type="checkbox" 
+                    checkd={'XX'}
+                    onChange={()=>setCheckboxCarisma()}
+                    />
+                  </article>
               Salvaguarda
-            </article>
+            </section>
           </>
         </article>
         <hr />
@@ -233,20 +245,32 @@ export const Status = () => {
             <p className='num_mod'>
               {contarNumerosPares(constituicao, constituicaoBonus)}
             </p>
-            <article>
+            <section className='salvaguarda_art' >
+              <article>
+
               <input
-                type='checkbox'
-                checked={checkboxConstituicao}
-                onChange={() => setCheckboxConstituicao(!checkboxConstituicao)}
+              className='checkbox_style'
+              type='checkbox'
+              checked={checkboxConstituicao}
+              onChange={() => setCheckboxConstituicao(!checkboxConstituicao)}
               />
               <p>
                 {checkboxConstituicao
                   ? contarNumerosPares(constituicao, constituicaoBonus) +
-                    Number(bonusProficiencia)
+                  Number(bonusProficiencia)
                   : contarNumerosPares(constituicao, constituicaoBonus)}
               </p>
+                  </article>
+                  <article>
+                    <input 
+                    className='checkbox_proficiencia'
+                    type="checkbox" 
+                    checkd={'XX'}
+                    onChange={()=>setCheckboxCarisma()}
+                    />
+                  </article>
               Salvaguarda
-            </article>
+            </section>
           </>
         </article>
         <hr />
@@ -278,20 +302,32 @@ export const Status = () => {
             <p className='num_mod'>
               {contarNumerosPares(inteligencia, inteligenciaBonus)}
             </p>
-            <article>
+            <section className='salvaguarda_art' >
+              <article>
+
               <input
-                type='checkbox'
-                checked={checkboxInteligencia}
-                onChange={() => setCheckboxInteligencia(!checkboxInteligencia)}
+              className='checkbox_style'
+              type='checkbox'
+              checked={checkboxInteligencia}
+              onChange={() => setCheckboxInteligencia(!checkboxInteligencia)}
               />
               <p>
                 {checkboxInteligencia
                   ? contarNumerosPares(inteligencia, inteligenciaBonus) +
-                    Number(bonusProficiencia)
+                  Number(bonusProficiencia)
                   : contarNumerosPares(inteligencia, inteligenciaBonus)}
               </p>
+                  </article>
+                  <article>
+                    <input 
+                    className='checkbox_proficiencia'
+                    type="checkbox" 
+                    checkd={'XX'}
+                    onChange={()=>setCheckboxCarisma()}
+                    />
+                  </article>
               Salvaguarda
-            </article>
+            </section>
           </>
         </article>
         <hr />
@@ -323,20 +359,32 @@ export const Status = () => {
             <p className='num_mod'>
               {contarNumerosPares(sabedoria, sabedoriaBonus)}
             </p>
-            <article>
+            <section className='salvaguarda_art' >
+              <article>
+
               <input
-                type='checkbox'
-                checked={checkboxSabedoria}
-                onChange={() => setCheckboxSabedoria(!checkboxSabedoria)}
+              className='checkbox_style'
+              type='checkbox'
+              checked={checkboxSabedoria}
+              onChange={() => setCheckboxSabedoria(!checkboxSabedoria)}
               />
               <p>
                 {checkboxSabedoria
                   ? contarNumerosPares(sabedoria, sabedoriaBonus) +
-                    Number(bonusProficiencia)
+                  Number(bonusProficiencia)
                   : contarNumerosPares(sabedoria, sabedoriaBonus)}
               </p>
+                  </article>
+                  <article>
+                    <input 
+                    className='checkbox_proficiencia'
+                    type="checkbox" 
+                    checkd={'XX'}
+                    onChange={()=>setCheckboxCarisma()}
+                    />
+                  </article>
               Salvaguarda
-            </article>
+            </section>
           </>
         </article>
         <hr />
@@ -369,20 +417,32 @@ export const Status = () => {
             <p className='num_mod'>
               {contarNumerosPares(carisma, carismaBonus)}
             </p>
-            <article>
+            <section className='salvaguarda_art' >
+              <article>
+
               <input
-                type='checkbox'
-                checked={checkboxCarisma}
-                onChange={() => setCheckboxCarisma(!checkboxCarisma)}
+              className='checkbox_style'
+              type='checkbox'
+              checked={checkboxCarisma}
+              onChange={() => setCheckboxCarisma(!checkboxCarisma)}
               />
               <p>
                 {checkboxCarisma
                   ? contarNumerosPares(carisma, carismaBonus) +
-                    Number(bonusProficiencia)
+                  Number(bonusProficiencia)
                   : contarNumerosPares(carisma, carismaBonus)}
               </p>
+                  </article>
+                  <article>
+                    <input 
+                    className='checkbox_proficiencia'
+                    type="checkbox" 
+                    checkd={'XX'}
+                    onChange={()=>setCheckboxCarisma()}
+                    />
+                  </article>
               Salvaguarda
-            </article>
+            </section>
           </>
         </article>
       </section>
