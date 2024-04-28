@@ -10,6 +10,7 @@ export const Status = () => {
   const [carisma, setCarisma] = useState('');
   const [inspiracao, setInspiracao] = useState('');
   const [bonusProficiencia, setBonusProficiencia] = useState('');
+  const [checkboxMarcado, setCheckboxMarcado] = useState(false);
 
   const [forcaBonus, setForcaBonus] = useState('');
   const [destrezaBonus, setDestrezaBonus] = useState('');
@@ -136,9 +137,19 @@ export const Status = () => {
           </p>
           <p className='num_mod'>{contarNumerosPares(forca, forcaBonus)}</p>
         </article>
-
         <article>
-          <input type="checkbox" /> Salvaguarda
+          <input
+            type='checkbox'
+            checked={checkboxMarcado}
+            onChange={() => setCheckboxMarcado(!checkboxMarcado)}
+          />
+          <p>
+            {checkboxMarcado
+              ? contarNumerosPares(forca, forcaBonus) +
+                Number(bonusProficiencia)
+              : contarNumerosPares(forca, forcaBonus)}
+          </p>
+          Salvaguarda
         </article>
         <hr />
         <article className='mod_box'>
@@ -168,7 +179,14 @@ export const Status = () => {
           <p className='num_mod'>
             {contarNumerosPares(destreza, destrezaBonus)}
           </p>
-          <article><input type="checkbox" /> Salvaguarda</article>
+          <article>
+            <input type='checkbox' />
+            <p>
+              {contarNumerosPares(forca, forcaBonus) +
+                Number(bonusProficiencia)}
+            </p>
+            Salvaguarda
+          </article>
         </article>
         <hr />
         <article className='mod_box'>
@@ -198,7 +216,14 @@ export const Status = () => {
           <p className='num_mod'>
             {contarNumerosPares(constituicao, constituicaoBonus)}
           </p>
-          <article><input type="checkbox" /> Salvaguarda</article>
+          <article>
+            <input type='checkbox' />
+            <p>
+              {contarNumerosPares(forca, forcaBonus) +
+                Number(bonusProficiencia)}
+            </p>
+            Salvaguarda
+          </article>
         </article>
         <hr />
         <article className='mod_box'>
@@ -228,7 +253,14 @@ export const Status = () => {
           <p className='num_mod'>
             {contarNumerosPares(inteligencia, inteligenciaBonus)}
           </p>
-          <article><input type="checkbox" /> Salvaguarda</article>
+          <article>
+            <input type='checkbox' />
+            <p>
+              {contarNumerosPares(forca, forcaBonus) +
+                Number(bonusProficiencia)}
+            </p>
+            Salvaguarda
+          </article>
         </article>
         <hr />
         <article className='mod_box'>
@@ -258,7 +290,14 @@ export const Status = () => {
           <p className='num_mod'>
             {contarNumerosPares(sabedoria, sabedoriaBonus)}
           </p>
-          <article><input type="checkbox" /> Salvaguarda</article>
+          <article>
+            <input type='checkbox' />
+            <p>
+              {contarNumerosPares(forca, forcaBonus) +
+                Number(bonusProficiencia)}
+            </p>
+            Salvaguarda
+          </article>
         </article>
         <hr />
         <article className='mod_box'>
