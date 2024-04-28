@@ -37,7 +37,6 @@ export const Status = () => {
   const [checkboxIntimidacao, setCheckboxIntimidacao] = useState(false);
   const [checkboxPersuasao, setCheckboxPersuasao] = useState(false);
 
-
   const [forcaBonus, setForcaBonus] = useState('');
   const [destrezaBonus, setDestrezaBonus] = useState('');
   const [constituicaoBonus, setConstituicaoBonus] = useState('');
