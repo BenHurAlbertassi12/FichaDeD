@@ -10,7 +10,13 @@ export const Status = () => {
   const [carisma, setCarisma] = useState('');
   const [inspiracao, setInspiracao] = useState('');
   const [bonusProficiencia, setBonusProficiencia] = useState('');
-  const [checkboxMarcado, setCheckboxMarcado] = useState(false);
+
+  const [checkboxForca, setCheckboxForca] = useState(false);
+  const [checkboxDestreza, setCheckboxDestreza] = useState(false);
+  const [checkboxConstituicao, setCheckboxConstituicao] = useState(false);
+  const [checkboxInteligencia, setCheckboxInteligencia] = useState(false);
+  const [checkboxSabedoria, setCheckboxSabedoria] = useState(false);
+  const [checkboxCarisma, setCheckboxCarisma] = useState(false);
 
   const [forcaBonus, setForcaBonus] = useState('');
   const [destrezaBonus, setDestrezaBonus] = useState('');
@@ -113,80 +119,90 @@ export const Status = () => {
         </article>
       </section>
       <section className='mod_atributos'>
-        <article className='mod_box'>
-          <h4 className='mod_name'>Força</h4>
-          {isForca && (
-            <>
-              <input
-                className='input_line'
-                type='number'
-                value={forca}
-                onChange={(e) => setForca(e.target.value)}
-              />
-              <input
-                className='input_line'
-                type='number'
-                value={forcaBonus}
-                onChange={(e) => setForcaBonus(e.target.value)}
-              />
-            </>
-          )}
-          <p className='p_atributo' onClick={() => toggleVisibility('forca')}>
-            {isForca ? forca : forca}{' '}
-            <span className='bonus_atributo'>{forcaBonus}</span>
-          </p>
-          <p className='num_mod'>{contarNumerosPares(forca, forcaBonus)}</p>
-        </article>
-        <article>
-          <input
-            type='checkbox'
-            checked={checkboxMarcado}
-            onChange={() => setCheckboxMarcado(!checkboxMarcado)}
-          />
-          <p>
-            {checkboxMarcado
-              ? contarNumerosPares(forca, forcaBonus) +
-                Number(bonusProficiencia)
-              : contarNumerosPares(forca, forcaBonus)}
-          </p>
-          Salvaguarda
-        </article>
-        <hr />
-        <article className='mod_box'>
-          <h4 className='mod_name'>Destreza</h4>
-          {isDestreza && (
-            <>
-              <input
-                className='input_line'
-                type='number'
-                value={destreza}
-                onChange={(e) => setDestreza(e.target.value)}
-              />
-              <input
-                className='input_line'
-                type='number'
-                value={destrezaBonus}
-                onChange={(e) => setDestrezaBonus(e.target.value)}
-              />
-            </>
-          )}
-          <p
-            className='p_atributo'
-            onClick={() => toggleVisibility('destreza')}>
-            {isDestreza ? destreza : destreza}{' '}
-            <span className='bonus_atributo'>{destrezaBonus}</span>
-          </p>
-          <p className='num_mod'>
-            {contarNumerosPares(destreza, destrezaBonus)}
-          </p>
+        <div>
+          <article className='mod_box'>
+            <h4 className='mod_name'>Força</h4>
+            {isForca && (
+              <>
+                <input
+                  className='input_line'
+                  type='number'
+                  value={forca}
+                  onChange={(e) => setForca(e.target.value)}
+                />
+                <input
+                  className='input_line'
+                  type='number'
+                  value={forcaBonus}
+                  onChange={(e) => setForcaBonus(e.target.value)}
+                />
+              </>
+            )}
+            <p className='p_atributo' onClick={() => toggleVisibility('forca')}>
+              {isForca ? forca : forca}{' '}
+              <span className='bonus_atributo'>{forcaBonus}</span>
+            </p>
+            <p className='num_mod'>{contarNumerosPares(forca, forcaBonus)}</p>
+          </article>
           <article>
-            <input type='checkbox' />
+            <input
+              type='checkbox'
+              checked={checkboxForca}
+              onChange={() => setCheckboxForca(!checkboxForca)}
+            />
             <p>
-              {contarNumerosPares(forca, forcaBonus) +
-                Number(bonusProficiencia)}
+              {checkboxForca
+                ? contarNumerosPares(forca, forcaBonus) +
+                  Number(bonusProficiencia)
+                : contarNumerosPares(forca, forcaBonus)}
             </p>
             Salvaguarda
           </article>
+        </div>
+        <hr />
+        <article className='mod_box'>
+          <>
+            <h4 className='mod_name'>Destreza</h4>
+            {isDestreza && (
+              <>
+                <input
+                  className='input_line'
+                  type='number'
+                  value={destreza}
+                  onChange={(e) => setDestreza(e.target.value)}
+                />
+                <input
+                  className='input_line'
+                  type='number'
+                  value={destrezaBonus}
+                  onChange={(e) => setDestrezaBonus(e.target.value)}
+                />
+              </>
+            )}
+            <p
+              className='p_atributo'
+              onClick={() => toggleVisibility('destreza')}>
+              {isDestreza ? destreza : destreza}{' '}
+              <span className='bonus_atributo'>{destrezaBonus}</span>
+            </p>
+            <p className='num_mod'>
+              {contarNumerosPares(destreza, destrezaBonus)}
+            </p>
+            <article>
+              <input
+                type='checkbox'
+                checked={checkboxDestreza}
+                onChange={() => setCheckboxDestreza(!checkboxDestreza)}
+              />
+              <p>
+                {checkboxDestreza
+                  ? contarNumerosPares(forca, forcaBonus) +
+                    Number(bonusProficiencia)
+                  : contarNumerosPares(forca, forcaBonus)}
+              </p>
+              Salvaguarda
+            </article>
+          </>
         </article>
         <hr />
         <article className='mod_box'>
@@ -217,10 +233,16 @@ export const Status = () => {
             {contarNumerosPares(constituicao, constituicaoBonus)}
           </p>
           <article>
-            <input type='checkbox' />
+            <input
+              type='checkbox'
+              checked={checkboxConstituicao}
+              onChange={() => setCheckboxConstituicao(!checkboxConstituicao)}
+            />
             <p>
-              {contarNumerosPares(forca, forcaBonus) +
-                Number(bonusProficiencia)}
+              {checkboxConstituicao
+                ? contarNumerosPares(forca, forcaBonus) +
+                  Number(bonusProficiencia)
+                : contarNumerosPares(forca, forcaBonus)}
             </p>
             Salvaguarda
           </article>
@@ -254,10 +276,16 @@ export const Status = () => {
             {contarNumerosPares(inteligencia, inteligenciaBonus)}
           </p>
           <article>
-            <input type='checkbox' />
+            <input
+              type='checkbox'
+              checked={checkboxInteligencia}
+              onChange={() => setCheckboxInteligencia(!checkboxInteligencia)}
+            />
             <p>
-              {contarNumerosPares(forca, forcaBonus) +
-                Number(bonusProficiencia)}
+              {checkboxInteligencia
+                ? contarNumerosPares(forca, forcaBonus) +
+                  Number(bonusProficiencia)
+                : contarNumerosPares(forca, forcaBonus)}
             </p>
             Salvaguarda
           </article>
@@ -291,10 +319,16 @@ export const Status = () => {
             {contarNumerosPares(sabedoria, sabedoriaBonus)}
           </p>
           <article>
-            <input type='checkbox' />
+            <input
+              type='checkbox'
+              checked={checkboxSabedoria}
+              onChange={() => setCheckboxSabedoria(!checkboxSabedoria)}
+            />
             <p>
-              {contarNumerosPares(forca, forcaBonus) +
-                Number(bonusProficiencia)}
+              {checkboxSabedoria
+                ? contarNumerosPares(forca, forcaBonus) +
+                  Number(bonusProficiencia)
+                : contarNumerosPares(forca, forcaBonus)}
             </p>
             Salvaguarda
           </article>
@@ -324,6 +358,20 @@ export const Status = () => {
             <span className='bonus_atributo'>{carismaBonus}</span>
           </p>
           <p className='num_mod'>{contarNumerosPares(carisma, carismaBonus)}</p>
+          <article>
+            <input
+              type='checkbox'
+              checked={checkboxCarisma}
+              onChange={() => setCheckboxCarisma(!checkboxCarisma)}
+            />
+            <p>
+              {checkboxCarisma
+                ? contarNumerosPares(forca, forcaBonus) +
+                  Number(bonusProficiencia)
+                : contarNumerosPares(forca, forcaBonus)}
+            </p>
+            Salvaguarda
+          </article>
         </article>
       </section>
     </div>
