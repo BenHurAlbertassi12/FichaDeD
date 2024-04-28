@@ -102,10 +102,20 @@ border-radius: 0 10px 10px 0;
 }
 
 .salva_pericia{
+    flex-direction: column;
+    align-items: center;
+
+}
+.linha_pericia{
     display: flex;
     align-items: center;
 }
 
 .checkbox_salvaguardaa{
     display: flex;
+}
+
+.salvaguar_linha{
+    display: flex;
+    align-items: center;
 }
