@@ -196,9 +196,9 @@ export const Status = () => {
               />
               <p>
                 {checkboxDestreza
-                  ? contarNumerosPares(forca, forcaBonus) +
+                  ? contarNumerosPares(destreza, destrezaBonus) +
                     Number(bonusProficiencia)
-                  : contarNumerosPares(forca, forcaBonus)}
+                  : contarNumerosPares(destreza, destrezaBonus)}
               </p>
               Salvaguarda
             </article>
@@ -206,172 +206,184 @@ export const Status = () => {
         </article>
         <hr />
         <article className='mod_box'>
-          <h4 className='mod_name'>Constituição</h4>
-          {isConstituicao && (
-            <>
-              <input
-                className='input_line'
-                type='number'
-                value={constituicao}
-                onChange={(e) => setConstituicao(e.target.value)}
-              />
-              <input
-                className='input_line'
-                type='number'
-                value={constituicaoBonus}
-                onChange={(e) => setConstituicaoBonus(e.target.value)}
-              />
-            </>
-          )}
-          <p
-            className='p_atributo'
-            onClick={() => toggleVisibility('constituicao')}>
-            {isConstituicao ? constituicao : constituicao}{' '}
-            <span className='bonus_atributo'>{constituicaoBonus}</span>
-          </p>
-          <p className='num_mod'>
-            {contarNumerosPares(constituicao, constituicaoBonus)}
-          </p>
-          <article>
-            <input
-              type='checkbox'
-              checked={checkboxConstituicao}
-              onChange={() => setCheckboxConstituicao(!checkboxConstituicao)}
-            />
-            <p>
-              {checkboxConstituicao
-                ? contarNumerosPares(forca, forcaBonus) +
-                  Number(bonusProficiencia)
-                : contarNumerosPares(forca, forcaBonus)}
+          <>
+            <h4 className='mod_name'>Constituição</h4>
+            {isConstituicao && (
+              <>
+                <input
+                  className='input_line'
+                  type='number'
+                  value={constituicao}
+                  onChange={(e) => setConstituicao(e.target.value)}
+                />
+                <input
+                  className='input_line'
+                  type='number'
+                  value={constituicaoBonus}
+                  onChange={(e) => setConstituicaoBonus(e.target.value)}
+                />
+              </>
+            )}
+            <p
+              className='p_atributo'
+              onClick={() => toggleVisibility('constituicao')}>
+              {isConstituicao ? constituicao : constituicao}{' '}
+              <span className='bonus_atributo'>{constituicaoBonus}</span>
             </p>
-            Salvaguarda
-          </article>
+            <p className='num_mod'>
+              {contarNumerosPares(constituicao, constituicaoBonus)}
+            </p>
+            <article>
+              <input
+                type='checkbox'
+                checked={checkboxConstituicao}
+                onChange={() => setCheckboxConstituicao(!checkboxConstituicao)}
+              />
+              <p>
+                {checkboxConstituicao
+                  ? contarNumerosPares(constituicao, constituicaoBonus) +
+                    Number(bonusProficiencia)
+                  : contarNumerosPares(constituicao, constituicaoBonus)}
+              </p>
+              Salvaguarda
+            </article>
+          </>
         </article>
         <hr />
         <article className='mod_box'>
-          <h4 className='mod_name'>Inteligencia</h4>
-          {isInteligencia && (
-            <>
-              <input
-                className='input_line'
-                type='number'
-                value={inteligencia}
-                onChange={(e) => setInteligencia(e.target.value)}
-              />
-              <input
-                className='input_line'
-                type='number'
-                value={inteligenciaBonus}
-                onChange={(e) => setInteligenciaBonus(e.target.value)}
-              />
-            </>
-          )}
-          <p
-            className='p_atributo'
-            onClick={() => toggleVisibility('inteligencia')}>
-            {isInteligencia ? inteligencia : inteligencia}{' '}
-            <span className='bonus_atributo'>{inteligenciaBonus}</span>
-          </p>
-          <p className='num_mod'>
-            {contarNumerosPares(inteligencia, inteligenciaBonus)}
-          </p>
-          <article>
-            <input
-              type='checkbox'
-              checked={checkboxInteligencia}
-              onChange={() => setCheckboxInteligencia(!checkboxInteligencia)}
-            />
-            <p>
-              {checkboxInteligencia
-                ? contarNumerosPares(forca, forcaBonus) +
-                  Number(bonusProficiencia)
-                : contarNumerosPares(forca, forcaBonus)}
+          <>
+            <h4 className='mod_name'>Inteligencia</h4>
+            {isInteligencia && (
+              <>
+                <input
+                  className='input_line'
+                  type='number'
+                  value={inteligencia}
+                  onChange={(e) => setInteligencia(e.target.value)}
+                />
+                <input
+                  className='input_line'
+                  type='number'
+                  value={inteligenciaBonus}
+                  onChange={(e) => setInteligenciaBonus(e.target.value)}
+                />
+              </>
+            )}
+            <p
+              className='p_atributo'
+              onClick={() => toggleVisibility('inteligencia')}>
+              {isInteligencia ? inteligencia : inteligencia}{' '}
+              <span className='bonus_atributo'>{inteligenciaBonus}</span>
             </p>
-            Salvaguarda
-          </article>
+            <p className='num_mod'>
+              {contarNumerosPares(inteligencia, inteligenciaBonus)}
+            </p>
+            <article>
+              <input
+                type='checkbox'
+                checked={checkboxInteligencia}
+                onChange={() => setCheckboxInteligencia(!checkboxInteligencia)}
+              />
+              <p>
+                {checkboxInteligencia
+                  ? contarNumerosPares(inteligencia, inteligenciaBonus) +
+                    Number(bonusProficiencia)
+                  : contarNumerosPares(inteligencia, inteligenciaBonus)}
+              </p>
+              Salvaguarda
+            </article>
+          </>
         </article>
         <hr />
         <article className='mod_box'>
-          <h4 className='mod_name'>Sabedoria</h4>
-          {isSabedoria && (
-            <>
-              <input
-                className='input_line'
-                type='number'
-                value={sabedoria}
-                onChange={(e) => setSabedoria(e.target.value)}
-              />
-              <input
-                className='input_line'
-                type='number'
-                value={sabedoriaBonus}
-                onChange={(e) => setSabedoriaBonus(e.target.value)}
-              />
-            </>
-          )}
-          <p
-            className='p_atributo'
-            onClick={() => toggleVisibility('sabedoria')}>
-            {isSabedoria ? sabedoria : sabedoria}{' '}
-            <span className='bonus_atributo'>{sabedoriaBonus}</span>
-          </p>
-          <p className='num_mod'>
-            {contarNumerosPares(sabedoria, sabedoriaBonus)}
-          </p>
-          <article>
-            <input
-              type='checkbox'
-              checked={checkboxSabedoria}
-              onChange={() => setCheckboxSabedoria(!checkboxSabedoria)}
-            />
-            <p>
-              {checkboxSabedoria
-                ? contarNumerosPares(forca, forcaBonus) +
-                  Number(bonusProficiencia)
-                : contarNumerosPares(forca, forcaBonus)}
+          <>
+            <h4 className='mod_name'>Sabedoria</h4>
+            {isSabedoria && (
+              <>
+                <input
+                  className='input_line'
+                  type='number'
+                  value={sabedoria}
+                  onChange={(e) => setSabedoria(e.target.value)}
+                />
+                <input
+                  className='input_line'
+                  type='number'
+                  value={sabedoriaBonus}
+                  onChange={(e) => setSabedoriaBonus(e.target.value)}
+                />
+              </>
+            )}
+            <p
+              className='p_atributo'
+              onClick={() => toggleVisibility('sabedoria')}>
+              {isSabedoria ? sabedoria : sabedoria}{' '}
+              <span className='bonus_atributo'>{sabedoriaBonus}</span>
             </p>
-            Salvaguarda
-          </article>
+            <p className='num_mod'>
+              {contarNumerosPares(sabedoria, sabedoriaBonus)}
+            </p>
+            <article>
+              <input
+                type='checkbox'
+                checked={checkboxSabedoria}
+                onChange={() => setCheckboxSabedoria(!checkboxSabedoria)}
+              />
+              <p>
+                {checkboxSabedoria
+                  ? contarNumerosPares(sabedoria, sabedoriaBonus) +
+                    Number(bonusProficiencia)
+                  : contarNumerosPares(sabedoria, sabedoriaBonus)}
+              </p>
+              Salvaguarda
+            </article>
+          </>
         </article>
         <hr />
         <article className='mod_box'>
-          <h4 className='mod_name'>Carisma</h4>
-          {isCarisma && (
-            <>
-              <input
-                className='input_line'
-                type='number'
-                value={carisma}
-                onChange={(e) => setCarisma(e.target.value)}
-              />
-              <input
-                className='input_line'
-                type='number'
-                value={carismaBonus}
-                onChange={(e) => setCarismaBonus(e.target.value)}
-              />
-            </>
-          )}
+          <>
+            <h4 className='mod_name'>Carisma</h4>
+            {isCarisma && (
+              <>
+                <input
+                  className='input_line'
+                  type='number'
+                  value={carisma}
+                  onChange={(e) => setCarisma(e.target.value)}
+                />
+                <input
+                  className='input_line'
+                  type='number'
+                  value={carismaBonus}
+                  onChange={(e) => setCarismaBonus(e.target.value)}
+                />
+              </>
+            )}
 
-          <p className='p_atributo' onClick={() => toggleVisibility('carisma')}>
-            {isCarisma ? carisma : carisma}{' '}
-            <span className='bonus_atributo'>{carismaBonus}</span>
-          </p>
-          <p className='num_mod'>{contarNumerosPares(carisma, carismaBonus)}</p>
-          <article>
-            <input
-              type='checkbox'
-              checked={checkboxCarisma}
-              onChange={() => setCheckboxCarisma(!checkboxCarisma)}
-            />
-            <p>
-              {checkboxCarisma
-                ? contarNumerosPares(forca, forcaBonus) +
-                  Number(bonusProficiencia)
-                : contarNumerosPares(forca, forcaBonus)}
+            <p
+              className='p_atributo'
+              onClick={() => toggleVisibility('carisma')}>
+              {isCarisma ? carisma : carisma}{' '}
+              <span className='bonus_atributo'>{carismaBonus}</span>
             </p>
-            Salvaguarda
-          </article>
+            <p className='num_mod'>
+              {contarNumerosPares(carisma, carismaBonus)}
+            </p>
+            <article>
+              <input
+                type='checkbox'
+                checked={checkboxCarisma}
+                onChange={() => setCheckboxCarisma(!checkboxCarisma)}
+              />
+              <p>
+                {checkboxCarisma
+                  ? contarNumerosPares(carisma, carismaBonus) +
+                    Number(bonusProficiencia)
+                  : contarNumerosPares(carisma, carismaBonus)}
+              </p>
+              Salvaguarda
+            </article>
+          </>
         </article>
       </section>
     </div>
