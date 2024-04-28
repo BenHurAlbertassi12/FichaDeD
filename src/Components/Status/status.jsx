@@ -18,6 +18,26 @@ export const Status = () => {
   const [checkboxSabedoria, setCheckboxSabedoria] = useState(false);
   const [checkboxCarisma, setCheckboxCarisma] = useState(false);
 
+  const [checkboxAtletismo, setCheckboxAtletismo] = useState(false);
+  const [checkboxAcrobacia, setCheckboxAcrobacia] = useState(false);
+  const [checkboxFurtividade, setCheckboxFurtividade] = useState(false);
+  const [checkboxPrestidigitação, setCheckboxPrestidigitação] = useState(false);
+  const [checkboxArcanismo, setCheckboxArcanismo] = useState(false);
+  const [checkboxHistoria, setCheckboxHistoria] = useState(false);
+  const [checkboxInvestigacao, setCheckboxInvestigacao] = useState(false);
+  const [checkboxNatureza, setCheckboxNatureza] = useState(false);
+  const [checkboxReligiao, setCheckboxReligiao] = useState(false);
+  const [checkboxIntuicao, setCheckboxIntuicao] = useState(false);
+  const [checkboxLidarAnimais, setCheckboxLidarAnimais] = useState(false);
+  const [checkboxMedicina, setCheckboxMedicina] = useState(false);
+  const [checkboxPercepition, setCheckboxPercepition] = useState(false);
+  const [checkboxSobrevivencia, setCheckboxSobrevivencia] = useState(false);
+  const [checkboxAtuacao, setCheckboxAtuacao] = useState(false);
+  const [checkboxEnganacao, setCheckboxEnganacao] = useState(false);
+  const [checkboxIntimidacao, setCheckboxIntimidacao] = useState(false);
+  const [checkboxPersuasao, setCheckboxPersuasao] = useState(false);
+
+
   const [forcaBonus, setForcaBonus] = useState('');
   const [destrezaBonus, setDestrezaBonus] = useState('');
   const [constituicaoBonus, setConstituicaoBonus] = useState('');
