@@ -446,9 +446,9 @@ export const Status = () => {
                 </article>
                 História
               </section>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -460,9 +460,9 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Investigação
-              </div>
+              </section>
               <div className='salva_pericia'>
                 <div>
                   <input
