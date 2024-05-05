@@ -562,9 +562,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxIntuicao
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(sabedoria, sabedoriaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(sabedoria, sabedoriaBonus)}
                   </p>
                 </article>
                 Intuição
@@ -581,9 +581,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxLidarAnimais
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(sabedoria, sabedoriaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(sabedoria, sabedoriaBonus)}
                   </p>
                 </article>
                 Lidar com Animais
@@ -598,9 +598,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxMedicina
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(sabedoria, sabedoriaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(sabedoria, sabedoriaBonus)}
                   </p>
                 </article>
                 Medicina
@@ -617,9 +617,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxPercepition
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(sabedoria, sabedoriaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(sabedoria, sabedoriaBonus)}
                   </p>
                 </article>
                 Percepção
@@ -636,9 +636,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxSobrevivencia
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(sabedoria, sabedoriaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(sabedoria, sabedoriaBonus)}
                   </p>
                 </article>
                 Sobrevivencia
