@@ -165,21 +165,19 @@ export const Status = () => {
           </article>
           <section className='salva_pericia'>
             <div className='linha_pericia salvaguar_linha'>
-              <article>
-                <div className='checkbox_salvaguardaa'>
-                  <input
-                    type='checkbox'
-                    checked={checkboxForca}
-                    onChange={() => setCheckboxForca(!checkboxForca)}
-                  />
-                  <h4>
-                    {checkboxForca
-                      ? contarNumerosPares(forca, forcaBonus) +
-                        Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
-                  </h4>
-                </div>
-              </article>
+              <div className='checkbox_salvaguardaa'>
+                <input
+                  type='checkbox'
+                  checked={checkboxForca}
+                  onChange={() => setCheckboxForca(!checkboxForca)}
+                />
+                <h4>
+                  {checkboxForca
+                    ? contarNumerosPares(forca, forcaBonus) +
+                      Number(bonusProficiencia)
+                    : contarNumerosPares(forca, forcaBonus)}
+                </h4>
+              </div>
               Salvaguarda
             </div>
             <section className='linha_pericia'>
@@ -190,7 +188,7 @@ export const Status = () => {
                     checked={checkboxAtletismo}
                     onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
                   />
-                  <p>
+                  <p className='space_input'>
                     {checkboxAtletismo
                       ? contarNumerosPares(forca, forcaBonus) +
                         Number(bonusProficiencia)
@@ -260,6 +258,12 @@ export const Status = () => {
                       checkd={'XX'}
                       onChange={() => setCheckboxCarisma()}
                     />
+                    <p className='space_input'>
+                      {checkboxAtletismo
+                        ? contarNumerosPares(forca, forcaBonus) +
+                          Number(bonusProficiencia)
+                        : contarNumerosPares(forca, forcaBonus)}
+                    </p>
                   </article>
                   Acrobacia
                 </div>
@@ -271,6 +275,12 @@ export const Status = () => {
                       checkd={'XX'}
                       onChange={() => setCheckboxCarisma()}
                     />
+                    <p className='space_input'>
+                      {checkboxAtletismo
+                        ? contarNumerosPares(forca, forcaBonus) +
+                          Number(bonusProficiencia)
+                        : contarNumerosPares(forca, forcaBonus)}
+                    </p>
                   </article>
                   Furtividade
                 </div>
@@ -282,6 +292,12 @@ export const Status = () => {
                       checkd={'XX'}
                       onChange={() => setCheckboxCarisma()}
                     />
+                    <p className='space_input'>
+                      {checkboxAtletismo
+                        ? contarNumerosPares(forca, forcaBonus) +
+                          Number(bonusProficiencia)
+                        : contarNumerosPares(forca, forcaBonus)}
+                    </p>
                   </article>
                   Prestidigitação
                 </div>
@@ -402,6 +418,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Arcanismo
               </div>
@@ -413,6 +435,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 História
               </div>
@@ -424,6 +452,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Investigação
               </div>
@@ -435,6 +469,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Natureza
               </div>
@@ -446,6 +486,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Religição
               </div>
@@ -482,24 +528,26 @@ export const Status = () => {
               {contarNumerosPares(sabedoria, sabedoriaBonus)}
             </p>
             <section className='salva_pericia'>
-              <article>
-                <div className='checkbox_salvaguardaa'>
-                  <input
-                    className='checkbox_style'
-                    type='checkbox'
-                    checked={checkboxSabedoria}
-                    onChange={() => setCheckboxSabedoria(!checkboxSabedoria)}
-                  />
-                  <h4>
-                    {checkboxSabedoria
-                      ? contarNumerosPares(sabedoria, sabedoriaBonus) +
-                        Number(bonusProficiencia)
-                      : contarNumerosPares(sabedoria, sabedoriaBonus)}
-                  </h4>
-                </div>
-              </article>
-              Salvaguarda
-              <div>
+              <div className='linha_pericia salvaguar_linha'>
+                <article>
+                  <div className='checkbox_salvaguardaa'>
+                    <input
+                      className='checkbox_style'
+                      type='checkbox'
+                      checked={checkboxSabedoria}
+                      onChange={() => setCheckboxSabedoria(!checkboxSabedoria)}
+                    />
+                    <h4>
+                      {checkboxSabedoria
+                        ? contarNumerosPares(sabedoria, sabedoriaBonus) +
+                          Number(bonusProficiencia)
+                        : contarNumerosPares(sabedoria, sabedoriaBonus)}
+                    </h4>
+                  </div>
+                </article>
+                Salvaguarda
+              </div>
+              <div className='linha_pericia salvaguar_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -507,6 +555,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Intuição
               </div>
@@ -518,6 +572,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Lidar com Animais
               </div>
@@ -529,6 +589,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Medicina
               </div>
@@ -540,6 +606,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Percepção
               </div>
@@ -551,6 +623,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Sobrevivencia
               </div>
@@ -588,7 +666,8 @@ export const Status = () => {
               {contarNumerosPares(carisma, carismaBonus)}
             </p>
             <section className='salva_pericia'>
-              <article>
+              <div className='linha_pericia salvaguarda_linha'>
+                {/* <article> */}
                 <div className='checkbox_salvaguardaa'>
                   <input
                     className='checkbox_style'
@@ -596,6 +675,7 @@ export const Status = () => {
                     checked={checkboxCarisma}
                     onChange={() => setCheckboxCarisma(!checkboxCarisma)}
                   />
+
                   <h4>
                     {checkboxCarisma
                       ? contarNumerosPares(carisma, carismaBonus) +
@@ -603,9 +683,10 @@ export const Status = () => {
                       : contarNumerosPares(carisma, carismaBonus)}
                   </h4>
                 </div>
-              </article>
-              Salvaguarda
-              <div>
+                {/* </article> */}
+                Salvaguarda
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -614,6 +695,12 @@ export const Status = () => {
                     onChange={() => setCheckboxCarisma()}
                   />
                 </div>
+                <p className='space_input'>
+                  {checkboxAtletismo
+                    ? contarNumerosPares(forca, forcaBonus) +
+                      Number(bonusProficiencia)
+                    : contarNumerosPares(forca, forcaBonus)}
+                </p>
                 Atuação
               </div>
               <div className='linha_pericia salvaguarda_linha'>
@@ -624,6 +711,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Enganação
               </div>
@@ -635,6 +728,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Intimidação
               </div>
@@ -646,6 +745,12 @@ export const Status = () => {
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
+                  <p className='space_input'>
+                    {checkboxAtletismo
+                      ? contarNumerosPares(forca, forcaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(forca, forcaBonus)}
+                  </p>
                 </div>
                 Persuasão
               </div>
