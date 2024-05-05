@@ -373,25 +373,27 @@ export const Status = () => {
               {contarNumerosPares(inteligencia, inteligenciaBonus)}
             </p>
             <section className='salva_pericia'>
-              <article>
-                <div className='checkbox_salvaguardaa'>
-                  <input
-                    className='checkbox_style'
-                    type='checkbox'
-                    checked={checkboxInteligencia}
-                    onChange={() =>
-                      setCheckboxInteligencia(!checkboxInteligencia)
-                    }
-                  />
-                  <h4>
-                    {checkboxInteligencia
-                      ? contarNumerosPares(inteligencia, inteligenciaBonus) +
-                        Number(bonusProficiencia)
-                      : contarNumerosPares(inteligencia, inteligenciaBonus)}
-                  </h4>
-                </div>
-              </article>
-              Salvaguarda
+              <div className='linha_pericia salvaguar_linha'>
+                <article>
+                  <div className='checkbox_salvaguardaa'>
+                    <input
+                      className='checkbox_style'
+                      type='checkbox'
+                      checked={checkboxInteligencia}
+                      onChange={() =>
+                        setCheckboxInteligencia(!checkboxInteligencia)
+                      }
+                    />
+                    <h4>
+                      {checkboxInteligencia
+                        ? contarNumerosPares(inteligencia, inteligenciaBonus) +
+                          Number(bonusProficiencia)
+                        : contarNumerosPares(inteligencia, inteligenciaBonus)}
+                    </h4>
+                  </div>
+                </article>
+                Salvaguarda
+              </div>
               <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
