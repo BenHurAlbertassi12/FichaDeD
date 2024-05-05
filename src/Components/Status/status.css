@@ -1,7 +1,6 @@
 .distr {
-align-items: center;
-align-content: center;
-
+    align-items: center;
+    align-content: center;
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -15,11 +14,8 @@ align-content: center;
     width: auto;
     padding: 15px;
     display: flex;
-
     justify-content: center;
     flex-wrap: wrap;
-
-
 }
 
 .mod_name {
@@ -70,23 +66,17 @@ align-content: center;
 .insp_div {
     display: flex;
     align-content: baseline;
-
     width: 250px;
-
     margin: 0px;
     padding: 10px;
     border: 0px;
-
-
 }
 
 .div_inspiracao {
     border: 1px solid black;
     width: 75px;
     height: 75px;
-
     align-content: baseline;
-
     border-radius: 10px 25px 25px 10px;
 
 }
@@ -94,19 +84,40 @@ align-content: center;
 .p_inspiracao {
     width: 100%;
     border: 1px solid black;
-
     padding: 5px;
     margin-top: auto;
     margin-bottom: auto;
-
     border-radius: 0 10px 10px 0;
 }
 
+.insp_div2 {
+    display: flex;
+    align-content: baseline;
+    width: 250px;
+    margin: 0px;
+    padding: 10px;
+    border: 0px;
+}
+
+.div_inspiracao2 {
+    border: 1px solid black;
+    width: 75px;
+    height: 75px;
+    align-content: baseline;
+    border-radius: 25px 10px 10px 25px;
+}
+
+.p_inspiracao2 {
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 10px 0px 0px 10px;
+}
+
 .input_line_insp {
-
-
     width: 35px;
-
     padding: 0px;
     border: 0px;
     margin: 0px;
@@ -122,11 +133,9 @@ align-content: center;
 .linha_pericia {
     display: flex;
     align-items: center;
-
     margin: 0px;
     padding: 0px;
     border: 0px;
-
     width: auto;
 }
 
@@ -142,7 +151,6 @@ align-content: center;
 .space_input {
     padding-left: 15px;
     padding-right: 15px;
-
     margin: 0px;
 }
 
@@ -155,5 +163,4 @@ align-content: center;
     display: flex;
     justify-content: space-between;
     width: auto;
-
 }

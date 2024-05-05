@@ -116,8 +116,9 @@ export const Status = () => {
           </article>
           <p className='p_inspiracao'>Inspiração</p>
         </article>
-        <article className='insp_div'>
-          <article className='div_inspiracao'>
+        <article className='insp_div2'>
+          <p className='p_inspiracao2'>Bônus de proficiência</p>
+          <article className='div_inspiracao2'>
             {isBonusProficiencia && (
               <div>
                 <input
@@ -134,7 +135,6 @@ export const Status = () => {
               {isBonusProficiencia ? bonusProficiencia : bonusProficiencia}{' '}
             </h2>
           </article>
-          <p className='p_inspiracao'>Bônus de proficiência</p>
         </article>
       </section>
 
