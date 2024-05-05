@@ -112,6 +112,12 @@ border-radius: 0 10px 10px 0;
 .linha_pericia{
     display: flex;
     align-items: center;
+
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+
+    width: auto;
 }
 
 .checkbox_salvaguardaa{
@@ -125,4 +131,11 @@ border-radius: 0 10px 10px 0;
 .space_input{
     padding-left: 15px;
     padding-right: 15px;
+
+    margin: 0px;
+}
+
+.h4_salvaguarda{
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

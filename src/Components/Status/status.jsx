@@ -171,7 +171,7 @@ export const Status = () => {
                   checked={checkboxForca}
                   onChange={() => setCheckboxForca(!checkboxForca)}
                 />
-                <h4 className='space_input'>
+                <h4 className='space_input h4_salvaguarda'>
                   {checkboxForca
                     ? contarNumerosPares(forca, forcaBonus) +
                       Number(bonusProficiencia)
@@ -238,7 +238,7 @@ export const Status = () => {
                       checked={checkboxDestreza}
                       onChange={() => setCheckboxDestreza(!checkboxDestreza)}
                     />
-                    <h4 className='space_input'>
+                    <h4 className='space_input h4_salvaguarda'>
                       {checkboxDestreza
                         ? contarNumerosPares(destreza, destrezaBonus) +
                           Number(bonusProficiencia)
@@ -346,7 +346,7 @@ export const Status = () => {
                         setCheckboxConstituicao(!checkboxConstituicao)
                       }
                     />
-                    <h4 className='space_input'>
+                    <h4 className='space_input h4_salvaguarda'>
                       {checkboxConstituicao
                         ? contarNumerosPares(constituicao, constituicaoBonus) +
                           Number(bonusProficiencia)
@@ -400,7 +400,7 @@ export const Status = () => {
                         setCheckboxInteligencia(!checkboxInteligencia)
                       }
                     />
-                    <h4 className='space_input'>
+                    <h4 className='space_input h4_salvaguarda'>
                       {checkboxInteligencia
                         ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                           Number(bonusProficiencia)
@@ -537,7 +537,7 @@ export const Status = () => {
                       checked={checkboxSabedoria}
                       onChange={() => setCheckboxSabedoria(!checkboxSabedoria)}
                     />
-                    <h4 className='space_input'>
+                    <h4 className='space_input h4_salvaguarda'>
                       {checkboxSabedoria
                         ? contarNumerosPares(sabedoria, sabedoriaBonus) +
                           Number(bonusProficiencia)
@@ -675,7 +675,7 @@ export const Status = () => {
                     onChange={() => setCheckboxCarisma(!checkboxCarisma)}
                   />
 
-                  <h4 className='space_input'>
+                  <h4 className='space_input h4_salvaguarda'>
                     {checkboxCarisma
                       ? contarNumerosPares(carisma, carismaBonus) +
                         Number(bonusProficiencia)
