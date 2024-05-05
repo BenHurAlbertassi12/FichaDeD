@@ -164,22 +164,22 @@ export const Status = () => {
             <p className='num_mod'>{contarNumerosPares(forca, forcaBonus)}</p>
           </article>
           <section className='salva_pericia'>
-            <div className='linha_pericia salvaguar_linha'>
-              <div className='checkbox_salvaguardaa'>
+            <section className='linha_pericia'>
+              <article className='linha_pericia'>
                 <input
                   type='checkbox'
                   checked={checkboxForca}
                   onChange={() => setCheckboxForca(!checkboxForca)}
                 />
-                <h4>
+                <h4 className='space_input'>
                   {checkboxForca
                     ? contarNumerosPares(forca, forcaBonus) +
                       Number(bonusProficiencia)
                     : contarNumerosPares(forca, forcaBonus)}
                 </h4>
-              </div>
+              </article>
               Salvaguarda
-            </div>
+            </section>
             <section className='linha_pericia'>
               <article className='linha_pericia'>
                 <div className='linha_pericia'>
@@ -239,7 +239,7 @@ export const Status = () => {
                       checked={checkboxDestreza}
                       onChange={() => setCheckboxDestreza(!checkboxDestreza)}
                     />
-                    <h4>
+                    <h4 className='space_input'>
                       {checkboxDestreza
                         ? contarNumerosPares(destreza, destrezaBonus) +
                           Number(bonusProficiencia)
@@ -348,7 +348,7 @@ export const Status = () => {
                         setCheckboxConstituicao(!checkboxConstituicao)
                       }
                     />
-                    <h4>
+                    <h4 className='space_input'>
                       {checkboxConstituicao
                         ? contarNumerosPares(constituicao, constituicaoBonus) +
                           Number(bonusProficiencia)
@@ -402,7 +402,7 @@ export const Status = () => {
                         setCheckboxInteligencia(!checkboxInteligencia)
                       }
                     />
-                    <h4>
+                    <h4 className='space_input'>
                       {checkboxInteligencia
                         ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                           Number(bonusProficiencia)
@@ -412,9 +412,9 @@ export const Status = () => {
                 </article>
                 Salvaguarda
               </div>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -429,9 +429,9 @@ export const Status = () => {
                 </article>
                 Arcanismo
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -446,9 +446,9 @@ export const Status = () => {
                 </article>
                 História
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -463,9 +463,9 @@ export const Status = () => {
                 </article>
                 Investigação
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -480,9 +480,9 @@ export const Status = () => {
                 </article>
                 Natureza
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -539,7 +539,7 @@ export const Status = () => {
                       checked={checkboxSabedoria}
                       onChange={() => setCheckboxSabedoria(!checkboxSabedoria)}
                     />
-                    <h4>
+                    <h4 className='space_input'>
                       {checkboxSabedoria
                         ? contarNumerosPares(sabedoria, sabedoriaBonus) +
                           Number(bonusProficiencia)
@@ -549,9 +549,9 @@ export const Status = () => {
                 </article>
                 Salvaguarda
               </div>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -566,9 +566,9 @@ export const Status = () => {
                 </article>
                 Intuição
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -583,9 +583,9 @@ export const Status = () => {
                 </article>
                 Lidar com Animais
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -600,9 +600,9 @@ export const Status = () => {
                 </article>
                 Medicina
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -617,9 +617,9 @@ export const Status = () => {
                 </article>
                 Percepção
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -678,7 +678,7 @@ export const Status = () => {
                     onChange={() => setCheckboxCarisma(!checkboxCarisma)}
                   />
 
-                  <h4>
+                  <h4 className='space_input'>
                     {checkboxCarisma
                       ? contarNumerosPares(carisma, carismaBonus) +
                         Number(bonusProficiencia)
@@ -688,9 +688,9 @@ export const Status = () => {
                 {/* </article> */}
                 Salvaguarda
               </div>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -705,9 +705,9 @@ export const Status = () => {
                 </p>
                 Atuação
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -722,9 +722,9 @@ export const Status = () => {
                 </article>
                 Enganação
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -739,9 +739,9 @@ export const Status = () => {
                 </article>
                 Intimidação
               </section>
-                <section className='linha_pericia'>
-                  <article className='linha_pericia'>
-                    <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
