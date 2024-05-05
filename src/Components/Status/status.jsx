@@ -265,7 +265,6 @@ export const Status = () => {
                   </article>
                   Acrobacia
                 </section>
-
                 <section className='linha_pericia'>
                   <article className='linha_pericia'>
                     <input
@@ -291,14 +290,16 @@ export const Status = () => {
                     <input
                       className='checkbox_proficiencia'
                       type='checkbox'
-                      checked={'checkbox'}
-                      onChange={() => setCheckboxCarisma()}
+                      checked={checkboxPrestidigitação}
+                      onChange={() =>
+                        setCheckboxPrestidigitação(!checkboxPrestidigitação)
+                      }
                     />
                     <p className='space_input'>
-                      {checkboxAtletismo
-                        ? contarNumerosPares(forca, forcaBonus) +
+                      {checkboxPrestidigitação
+                        ? contarNumerosPares(destreza, destrezaBonus) +
                           Number(bonusProficiencia)
-                        : contarNumerosPares(forca, forcaBonus)}
+                        : contarNumerosPares(destreza, destrezaBonus)}
                     </p>
                   </article>
                   Prestidigitação
