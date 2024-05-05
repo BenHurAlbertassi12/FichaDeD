@@ -418,14 +418,14 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxArcanismo}
+                    onChange={() => setCheckboxArcanismo(!checkboxArcanismo)}
                   />
                   <p className='space_input'>
-                    {checkboxAtletismo
-                      ? contarNumerosPares(forca, forcaBonus) +
+                    {checkboxArcanismo
+                      ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(inteligencia, inteligenciaBonus)}
                   </p>
                 </article>
                 Arcanismo
@@ -440,9 +440,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(inteligencia, inteligenciaBonus)}
                   </p>
                 </article>
                 História
@@ -457,9 +457,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(inteligencia, inteligenciaBonus)}
                   </p>
                 </article>
                 Investigação
@@ -474,9 +474,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(inteligencia, inteligenciaBonus)}
                   </p>
                 </article>
                 Natureza
@@ -491,9 +491,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(inteligencia, inteligenciaBonus)}
                   </p>
                 </article>
                 Religição
