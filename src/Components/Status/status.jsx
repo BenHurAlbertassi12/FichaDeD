@@ -722,9 +722,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxEnganacao
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(carisma, carismaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(carisma, carismaBonus)}
                   </p>
                 </article>
                 Enganação
@@ -739,9 +739,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxIntimidacao
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(carisma, carismaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(carisma, carismaBonus)}
                   </p>
                 </article>
                 Intimidação
@@ -756,9 +756,9 @@ export const Status = () => {
                   />
                   <p className='space_input'>
                     {checkboxPersuasao
-                      ? contarNumerosPares(forca, forcaBonus) +
+                      ? contarNumerosPares(carisma, carismaBonus) +
                         Number(bonusProficiencia)
-                      : contarNumerosPares(forca, forcaBonus)}
+                      : contarNumerosPares(carisma, carismaBonus)}
                   </p>
                 </article>
                 Persuasão
