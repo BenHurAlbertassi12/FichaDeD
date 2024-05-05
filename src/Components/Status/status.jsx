@@ -452,11 +452,13 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxInvestigacao}
+                    onChange={() =>
+                      setCheckboxInvestigacao(!checkboxInvestigacao)
+                    }
                   />
                   <p className='space_input'>
-                    {checkboxAtletismo
+                    {checkboxInvestigacao
                       ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                         Number(bonusProficiencia)
                       : contarNumerosPares(inteligencia, inteligenciaBonus)}
@@ -469,11 +471,11 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxNatureza}
+                    onChange={() => setCheckboxNatureza(!checkboxNatureza)}
                   />
                   <p className='space_input'>
-                    {checkboxAtletismo
+                    {checkboxNatureza
                       ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                         Number(bonusProficiencia)
                       : contarNumerosPares(inteligencia, inteligenciaBonus)}
@@ -486,17 +488,17 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxReligiao}
+                    onChange={() => setCheckboxReligiao(!checkboxReligiao)}
                   />
                   <p className='space_input'>
-                    {checkboxAtletismo
+                    {checkboxReligiao
                       ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                         Number(bonusProficiencia)
                       : contarNumerosPares(inteligencia, inteligenciaBonus)}
                   </p>
                 </article>
-                Religição
+                Religião
               </section>
             </section>
           </div>
@@ -555,8 +557,8 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxAtletismo}
+                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
@@ -572,8 +574,8 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxAtletismo}
+                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
@@ -589,8 +591,8 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxAtletismo}
+                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
@@ -606,8 +608,8 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxAtletismo}
+                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
@@ -623,8 +625,8 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxAtletismo}
+                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
@@ -709,8 +711,8 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxAtletismo}
+                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
@@ -726,8 +728,8 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxAtletismo}
+                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
@@ -743,8 +745,8 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxAtletismo}
+                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
                   />
                   <p className='space_input'>
                     {checkboxAtletismo
