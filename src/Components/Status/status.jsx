@@ -463,9 +463,9 @@ export const Status = () => {
                 </article>
                 Investigação
               </section>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -477,12 +477,12 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Natureza
-              </div>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+              </section>
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -494,9 +494,9 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Religição
-              </div>
+              </section>
             </section>
           </div>
         </article>
@@ -549,9 +549,9 @@ export const Status = () => {
                 </article>
                 Salvaguarda
               </div>
-              <div className='linha_pericia salvaguar_linha'>
-                <div>
-                  <input
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -563,12 +563,12 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Intuição
-              </div>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+              </section>
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -580,12 +580,12 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Lidar com Animais
-              </div>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+              </section>
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -597,12 +597,12 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Medicina
-              </div>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+              </section>
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -614,12 +614,12 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Percepção
-              </div>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+              </section>
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -631,9 +631,9 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Sobrevivencia
-              </div>
+              </section>
             </section>
           </div>
         </article>
@@ -688,15 +688,15 @@ export const Status = () => {
                 {/* </article> */}
                 Salvaguarda
               </div>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
                     onChange={() => setCheckboxCarisma()}
                   />
-                </div>
+                </article>
                 <p className='space_input'>
                   {checkboxAtletismo
                     ? contarNumerosPares(forca, forcaBonus) +
@@ -704,10 +704,10 @@ export const Status = () => {
                     : contarNumerosPares(forca, forcaBonus)}
                 </p>
                 Atuação
-              </div>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+              </section>
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -719,12 +719,12 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Enganação
-              </div>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+              </section>
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -736,12 +736,12 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Intimidação
-              </div>
-              <div className='salva_pericia'>
-                <div>
-                  <input
+              </section>
+                <section className='linha_pericia'>
+                  <article className='linha_pericia'>
+                    <input
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checkd={'XX'}
@@ -753,9 +753,9 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
                   </p>
-                </div>
+                </article>
                 Persuasão
-              </div>
+              </section>
             </section>
           </div>
         </article>
