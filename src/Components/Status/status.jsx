@@ -230,21 +230,21 @@ export const Status = () => {
               {contarNumerosPares(destreza, destrezaBonus)}
             </p>
             <section className='salva_pericia'>
-            <section className='linha_pericia'>
-              <article className='linha_pericia'>
-                <input
-                      className='checkbox_style'
-                      type='checkbox'
-                      checked={checkboxDestreza}
-                      onChange={() => setCheckboxDestreza(!checkboxDestreza)}
-                    />
-                    <h4 className='space_input h4_salvaguarda'>
-                      {checkboxDestreza
-                        ? contarNumerosPares(destreza, destrezaBonus) +
-                          Number(bonusProficiencia)
-                        : contarNumerosPares(destreza, destrezaBonus)}
-                    </h4>
-                  </article>
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
+                    className='checkbox_style'
+                    type='checkbox'
+                    checked={checkboxDestreza}
+                    onChange={() => setCheckboxDestreza(!checkboxDestreza)}
+                  />
+                  <h4 className='space_input h4_salvaguarda'>
+                    {checkboxDestreza
+                      ? contarNumerosPares(destreza, destrezaBonus) +
+                        Number(bonusProficiencia)
+                      : contarNumerosPares(destreza, destrezaBonus)}
+                  </h4>
+                </article>
                 Salvaguarda
               </section>
               <>
@@ -253,14 +253,14 @@ export const Status = () => {
                     <input
                       className='checkbox_proficiencia'
                       type='checkbox'
-                      checkd={'XX'}
-                      onChange={() => setCheckboxCarisma()}
+                      checked={checkboxAcrobacia}
+                      onChange={() => setCheckboxAcrobacia(!checkboxAcrobacia)}
                     />
                     <p className='space_input'>
-                      {checkboxAtletismo
-                        ? contarNumerosPares(forca, forcaBonus) +
+                      {checkboxAcrobacia
+                        ? contarNumerosPares(destreza, destrezaBonus) +
                           Number(bonusProficiencia)
-                        : contarNumerosPares(forca, forcaBonus)}
+                        : contarNumerosPares(destreza, destrezaBonus)}
                     </p>
                   </article>
                   Acrobacia
@@ -271,14 +271,16 @@ export const Status = () => {
                     <input
                       className='checkbox_proficiencia'
                       type='checkbox'
-                      checkd={'XX'}
-                      onChange={() => setCheckboxCarisma()}
+                      checked={checkboxFurtividade}
+                      onChange={() =>
+                        setCheckboxFurtividade(!checkboxFurtividade)
+                      }
                     />
                     <p className='space_input'>
-                      {checkboxAtletismo
-                        ? contarNumerosPares(forca, forcaBonus) +
+                      {checkboxFurtividade
+                        ? contarNumerosPares(destreza, destrezaBonus) +
                           Number(bonusProficiencia)
-                        : contarNumerosPares(forca, forcaBonus)}
+                        : contarNumerosPares(destreza, destrezaBonus)}
                     </p>
                   </article>
                   Furtividade
@@ -289,7 +291,7 @@ export const Status = () => {
                     <input
                       className='checkbox_proficiencia'
                       type='checkbox'
-                      checkd={'XX'}
+                      checked={'checkbox'}
                       onChange={() => setCheckboxCarisma()}
                     />
                     <p className='space_input'>
@@ -415,7 +417,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -432,7 +434,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -449,7 +451,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -466,7 +468,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -483,7 +485,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -552,7 +554,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -569,7 +571,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -586,7 +588,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -603,7 +605,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -620,7 +622,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -666,9 +668,9 @@ export const Status = () => {
               {contarNumerosPares(carisma, carismaBonus)}
             </p>
             <section className='salva_pericia'>
-            <section className='linha_pericia'>
-              <article className='linha_pericia'>
-                <input
+              <section className='linha_pericia'>
+                <article className='linha_pericia'>
+                  <input
                     className='checkbox_style'
                     type='checkbox'
                     checked={checkboxCarisma}
@@ -689,15 +691,15 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
-                    onChange={() => setCheckboxCarisma()}
+                    checkd={'checkboxAtuacao'}
+                    onChange={() => setCheckboxAtuacao()}
                   />
                 </article>
                 <p className='space_input'>
-                  {checkboxAtletismo
-                    ? contarNumerosPares(forca, forcaBonus) +
+                  {checkboxAtuacao
+                    ? contarNumerosPares(carisma, carismaBonus) +
                       Number(bonusProficiencia)
-                    : contarNumerosPares(forca, forcaBonus)}
+                    : contarNumerosPares(carisma, carismaBonus)}
                 </p>
                 Atuação
               </section>
@@ -706,7 +708,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -723,7 +725,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
@@ -740,7 +742,7 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checkd={'XX'}
+                    checked={'checkbox'}
                     onChange={() => setCheckboxCarisma()}
                   />
                   <p className='space_input'>
