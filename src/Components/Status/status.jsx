@@ -557,11 +557,11 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={checkboxAtletismo}
-                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
+                    checked={checkboxIntuicao}
+                    onChange={() => setCheckboxIntuicao(!checkboxIntuicao)}
                   />
                   <p className='space_input'>
-                    {checkboxAtletismo
+                    {checkboxIntuicao
                       ? contarNumerosPares(forca, forcaBonus) +
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
@@ -574,11 +574,11 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={checkboxAtletismo}
-                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
+                    checked={checkboxLidarAnimais}
+                    onChange={() => setCheckboxLidarAnimais(!checkboxLidarAnimais)}
                   />
                   <p className='space_input'>
-                    {checkboxAtletismo
+                    {checkboxLidarAnimais
                       ? contarNumerosPares(forca, forcaBonus) +
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
@@ -591,11 +591,11 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={checkboxAtletismo}
-                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
+                    checked={checkboxMedicina}
+                    onChange={() => setCheckboxMedicina(!checkboxMedicina)}
                   />
                   <p className='space_input'>
-                    {checkboxAtletismo
+                    {checkboxMedicina
                       ? contarNumerosPares(forca, forcaBonus) +
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
@@ -608,11 +608,11 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={checkboxAtletismo}
-                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
+                    checked={checkboxPercepition}
+                    onChange={() => setCheckboxPercepition(!checkboxPercepition)}
                   />
                   <p className='space_input'>
-                    {checkboxAtletismo
+                    {checkboxPercepition
                       ? contarNumerosPares(forca, forcaBonus) +
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
@@ -625,11 +625,11 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={checkboxAtletismo}
-                    onChange={() => setCheckboxAtletismo(!checkboxAtletismo)}
+                    checked={checkboxSobrevivencia}
+                    onChange={() => setCheckboxSobrevivencia(!checkboxSobrevivencia)}
                   />
                   <p className='space_input'>
-                    {checkboxAtletismo
+                    {checkboxSobrevivencia
                       ? contarNumerosPares(forca, forcaBonus) +
                         Number(bonusProficiencia)
                       : contarNumerosPares(forca, forcaBonus)}
