@@ -435,11 +435,11 @@ export const Status = () => {
                   <input
                     className='checkbox_proficiencia'
                     type='checkbox'
-                    checked={'checkbox'}
-                    onChange={() => setCheckboxCarisma()}
+                    checked={checkboxHistoria}
+                    onChange={() => setCheckboxHistoria(!checkboxHistoria)}
                   />
                   <p className='space_input'>
-                    {checkboxAtletismo
+                    {checkboxHistoria
                       ? contarNumerosPares(inteligencia, inteligenciaBonus) +
                         Number(bonusProficiencia)
                       : contarNumerosPares(inteligencia, inteligenciaBonus)}
