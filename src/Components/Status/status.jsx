@@ -68,10 +68,6 @@ export const Status = () => {
       case 'bonusProficiencia':
         setIsBonusProficiencia(!isBonusProficiencia);
         break;
-
-      case 'bonusProficiencia':
-        setIsBonusProficiencia(!isBonusProficiencia);
-        break;
       case 'inspiracao':
         setIsInspiracao(!isInspiracao);
         break;
@@ -131,37 +127,37 @@ export const Status = () => {
           <p className='p_inspiracao'>Inspiração</p>
         </article>
         <section className='vida_iniciativa'>
-          <div>
-            <div>
-              <h4>CA</h4>
-              {isClasseArmadura && (
-                <input
-                  type='number'
-                  value={classeArmadura}
-                  onChange={(e) => setClasseArmadura(e.target.value)}
-                />
-              )}
-              <p onClick={() => toggleVisibility('classeArmadura')}>
-                {isClasseArmadura ? classeArmadura : classeArmadura}
-              </p>
-            </div>
-            <div>
-              <h4>Iniciativa</h4>
-              {bonusProficiencia}
-            </div>
-            <div>
-              <h4>Deslocamento</h4>
-              {isDeslocamento && (
-                <input
-                  type='number'
-                  value={deslocamento}
-                  onChange={(e) => setDeslocamento(e.target.value)}
-                />
-              )}
-              <p onClick={() => toggleVisibility('deslocamento')}>
-                {isDeslocamento ? deslocamento : deslocamento}
-              </p>
-            </div>
+          <div className='div_iniciativa CA'>
+            <h4>Classe Armadura</h4>
+            {isClasseArmadura && (
+              <input
+                type='number'
+                className='input_line_insp'
+                value={classeArmadura}
+                onChange={(e) => setClasseArmadura(e.target.value)}
+              />
+            )}
+            <p onClick={() => toggleVisibility('classeArmadura')}>
+              {isClasseArmadura ? classeArmadura : classeArmadura}
+            </p>
+          </div>
+          <div className='div_iniciativa'>
+            <h4>Iniciativa</h4>
+            {bonusProficiencia}
+          </div>
+          <div className='div_iniciativa deslocamento'>
+            <h4>Deslocamento</h4>
+            {isDeslocamento && (
+              <input
+                className='input_line_insp'
+                type='number'
+                value={deslocamento}
+                onChange={(e) => setDeslocamento(e.target.value)}
+              />
+            )}
+            <p onClick={() => toggleVisibility('deslocamento')}>
+              {isDeslocamento ? deslocamento : deslocamento}
+            </p>
           </div>
         </section>
         <article className='insp_div2'>

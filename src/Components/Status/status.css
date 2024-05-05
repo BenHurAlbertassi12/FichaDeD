@@ -165,5 +165,25 @@
     width: auto;
 }
 .vida_iniciativa{
+    display: flex;
 
+}
+.div_iniciativa{
+    padding-left: 15px;
+    padding-right: 15px;
+
+    margin-left: 15px;
+
+    border: 1px black solid;
+
+    border-radius: 50px;
+
+}
+.deslocamento{
+    border-radius: 0 50px 50px 0;
+    width: 130px;
+}
+.CA{
+    border-radius: 50px 0px 0px 50px;
+    width: 130px;
 }
