@@ -137,9 +137,10 @@ export const Status = () => {
           <p className='p_inspiracao'>Bônus de proficiência</p>
         </article>
       </section>
+
       <section className='mod_atributos'>
-        <section>
-          <article className='mod_box'>
+        <section className='mod_box'>
+          <article>
             <h4 className='mod_name'>Força</h4>
             {isForca && (
               <div>
@@ -363,6 +364,8 @@ export const Status = () => {
           </div>
         </article>
         <hr />
+        {/* </div>
+          <div className='flex_div'> */}
         <article className='mod_box'>
           <div>
             <h4 className='mod_name'>Inteligencia</h4>
@@ -504,6 +507,7 @@ export const Status = () => {
           </div>
         </article>
         <hr />
+
         <article className='mod_box'>
           <div>
             <h4 className='mod_name'>Sabedoria</h4>
@@ -735,7 +739,9 @@ export const Status = () => {
                     className='checkbox_proficiencia'
                     type='checkbox'
                     checked={checkboxIntimidacao}
-                    onChange={() => setCheckboxIntimidacao(!checkboxIntimidacao)}
+                    onChange={() =>
+                      setCheckboxIntimidacao(!checkboxIntimidacao)
+                    }
                   />
                   <p className='space_input'>
                     {checkboxIntimidacao
