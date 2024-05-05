@@ -230,10 +230,9 @@ export const Status = () => {
               {contarNumerosPares(destreza, destrezaBonus)}
             </p>
             <section className='salva_pericia'>
-              <div className='salva_pericia'>
-                <article>
-                  <div className='checkbox_salvaguardaa'>
-                    <input
+            <section className='linha_pericia'>
+              <article className='linha_pericia'>
+                <input
                       className='checkbox_style'
                       type='checkbox'
                       checked={checkboxDestreza}
@@ -245,10 +244,9 @@ export const Status = () => {
                           Number(bonusProficiencia)
                         : contarNumerosPares(destreza, destrezaBonus)}
                     </h4>
-                  </div>
-                </article>
+                  </article>
                 Salvaguarda
-              </div>
+              </section>
               <>
                 <section className='linha_pericia'>
                   <article className='linha_pericia'>
@@ -668,10 +666,9 @@ export const Status = () => {
               {contarNumerosPares(carisma, carismaBonus)}
             </p>
             <section className='salva_pericia'>
-              <div className='salva_pericia'>
-                {/* <article> */}
-                <div className='checkbox_salvaguardaa'>
-                  <input
+            <section className='linha_pericia'>
+              <article className='linha_pericia'>
+                <input
                     className='checkbox_style'
                     type='checkbox'
                     checked={checkboxCarisma}
@@ -684,10 +681,9 @@ export const Status = () => {
                         Number(bonusProficiencia)
                       : contarNumerosPares(carisma, carismaBonus)}
                   </h4>
-                </div>
-                {/* </article> */}
+                </article>
                 Salvaguarda
-              </div>
+              </section>
               <section className='linha_pericia'>
                 <article className='linha_pericia'>
                   <input
