@@ -101,7 +101,7 @@ border-radius: 0 10px 10px 0;
  margin: 0px;
 }
 
-.salva_pericia{
+.salva_pericia, .coluna_pericia{
     flex-direction: column;
     align-items: center;
 

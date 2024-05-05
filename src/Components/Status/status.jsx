@@ -101,14 +101,14 @@ export const Status = () => {
         <article className='insp_div'>
           <article className='div_inspiracao'>
             {isInspiracao && (
-              <>
+              <div>
                 <input
                   className='input_line_insp'
                   type='number'
                   value={inspiracao}
                   onChange={(e) => setInspiracao(e.target.value)}
                 />
-              </>
+              </div>
             )}
             <h2 className='' onClick={() => toggleVisibility('inspiracao')}>
               {isInspiracao ? inspiracao : inspiracao}{' '}
@@ -119,14 +119,14 @@ export const Status = () => {
         <article className='insp_div'>
           <article className='div_inspiracao'>
             {isBonusProficiencia && (
-              <>
+              <div>
                 <input
                   className='input_line_insp'
                   type='number'
                   value={bonusProficiencia}
                   onChange={(e) => setBonusProficiencia(e.target.value)}
                 />
-              </>
+              </div>
             )}
             <h2
               className=''
@@ -142,7 +142,7 @@ export const Status = () => {
           <article className='mod_box'>
             <h4 className='mod_name'>Força</h4>
             {isForca && (
-              <>
+              <div>
                 <input
                   className='input_line'
                   type='number'
@@ -155,7 +155,7 @@ export const Status = () => {
                   value={forcaBonus}
                   onChange={(e) => setForcaBonus(e.target.value)}
                 />
-              </>
+              </div>
             )}
             <p className='p_atributo' onClick={() => toggleVisibility('forca')}>
               {isForca ? forca : forca}{' '}
@@ -207,7 +207,7 @@ export const Status = () => {
           <section>
             <h4 className='mod_name'>Destreza</h4>
             {isDestreza && (
-              <>
+              <div>
                 <input
                   className='input_line'
                   type='number'
@@ -220,7 +220,7 @@ export const Status = () => {
                   value={destrezaBonus}
                   onChange={(e) => setDestrezaBonus(e.target.value)}
                 />
-              </>
+              </div>
             )}
             <p
               className='p_atributo'
@@ -232,7 +232,7 @@ export const Status = () => {
               {contarNumerosPares(destreza, destrezaBonus)}
             </p>
             <section className='salva_pericia'>
-              <div className='pericia_salvguarda_lin'>
+              <div className='linha_pericia salvaguarda_linha'>
                 <article>
                   <div className='checkbox_salvaguardaa'>
                     <input
@@ -251,48 +251,50 @@ export const Status = () => {
                 </article>
                 Salvaguarda
               </div>
-              <>
-                <article>
-                  <input
-                    className='checkbox_proficiencia'
-                    type='checkbox'
-                    checkd={'XX'}
-                    onChange={() => setCheckboxCarisma()}
-                  />
-                </article>
-                Acrobacia
-              </>
-              <>
-                <article>
-                  <input
-                    className='checkbox_proficiencia'
-                    type='checkbox'
-                    checkd={'XX'}
-                    onChange={() => setCheckboxCarisma()}
-                  />
-                </article>
-                Furtividade
-              </>
-              <>
-                <article>
-                  <input
-                    className='checkbox_proficiencia'
-                    type='checkbox'
-                    checkd={'XX'}
-                    onChange={() => setCheckboxCarisma()}
-                  />
-                </article>
-                Prestidigitação
-              </>
+              <div>
+                <div className='linha_pericia salvaguarda_linha'>
+                  <article>
+                    <input
+                      className='checkbox_proficiencia'
+                      type='checkbox'
+                      checkd={'XX'}
+                      onChange={() => setCheckboxCarisma()}
+                    />
+                  </article>
+                  Acrobacia
+                </div>
+                <div className='linha_pericia salvaguarda_linha'>
+                  <article>
+                    <input
+                      className='checkbox_proficiencia'
+                      type='checkbox'
+                      checkd={'XX'}
+                      onChange={() => setCheckboxCarisma()}
+                    />
+                  </article>
+                  Furtividade
+                </div>
+                <div className='linha_pericia salvaguarda_linha'>
+                  <article>
+                    <input
+                      className='checkbox_proficiencia'
+                      type='checkbox'
+                      checkd={'XX'}
+                      onChange={() => setCheckboxCarisma()}
+                    />
+                  </article>
+                  Prestidigitação
+                </div>
+              </div>
             </section>
           </section>
         </article>
         <hr />
         <article className='mod_box'>
-          <>
+          <div>
             <h4 className='mod_name'>Constituição</h4>
             {isConstituicao && (
-              <>
+              <div>
                 <input
                   className='input_line'
                   type='number'
@@ -305,7 +307,7 @@ export const Status = () => {
                   value={constituicaoBonus}
                   onChange={(e) => setConstituicaoBonus(e.target.value)}
                 />
-              </>
+              </div>
             )}
             <p
               className='p_atributo'
@@ -339,14 +341,14 @@ export const Status = () => {
                 Salvaguarda
               </div>
             </section>
-          </>
+          </div>
         </article>
         <hr />
         <article className='mod_box'>
-          <>
+          <div>
             <h4 className='mod_name'>Inteligencia</h4>
             {isInteligencia && (
-              <>
+              <div>
                 <input
                   className='input_line'
                   type='number'
@@ -359,7 +361,7 @@ export const Status = () => {
                   value={inteligenciaBonus}
                   onChange={(e) => setInteligenciaBonus(e.target.value)}
                 />
-              </>
+              </div>
             )}
             <p
               className='p_atributo'
@@ -390,7 +392,7 @@ export const Status = () => {
                 </div>
               </article>
               Salvaguarda
-              <>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -400,8 +402,8 @@ export const Status = () => {
                   />
                 </div>
                 Arcanismo
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -411,8 +413,8 @@ export const Status = () => {
                   />
                 </div>
                 História
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -422,8 +424,8 @@ export const Status = () => {
                   />
                 </div>
                 Investigação
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -433,8 +435,8 @@ export const Status = () => {
                   />
                 </div>
                 Natureza
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -444,16 +446,16 @@ export const Status = () => {
                   />
                 </div>
                 Religição
-              </>
+              </div>
             </section>
-          </>
+          </div>
         </article>
         <hr />
         <article className='mod_box'>
-          <>
+          <div>
             <h4 className='mod_name'>Sabedoria</h4>
             {isSabedoria && (
-              <>
+              <div>
                 <input
                   className='input_line'
                   type='number'
@@ -466,7 +468,7 @@ export const Status = () => {
                   value={sabedoriaBonus}
                   onChange={(e) => setSabedoriaBonus(e.target.value)}
                 />
-              </>
+              </div>
             )}
             <p
               className='p_atributo'
@@ -495,7 +497,7 @@ export const Status = () => {
                 </div>
               </article>
               Salvaguarda
-              <>
+              <div>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -505,8 +507,8 @@ export const Status = () => {
                   />
                 </div>
                 Intuição
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -516,8 +518,8 @@ export const Status = () => {
                   />
                 </div>
                 Lidar com Animais
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -527,8 +529,8 @@ export const Status = () => {
                   />
                 </div>
                 Medicina
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -538,8 +540,8 @@ export const Status = () => {
                   />
                 </div>
                 Percepção
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -549,16 +551,16 @@ export const Status = () => {
                   />
                 </div>
                 Sobrevivencia
-              </>
+              </div>
             </section>
-          </>
+          </div>
         </article>
         <hr />
         <article className='mod_box'>
-          <>
+          <div>
             <h4 className='mod_name'>Carisma</h4>
             {isCarisma && (
-              <>
+              <div>
                 <input
                   className='input_line'
                   type='number'
@@ -571,7 +573,7 @@ export const Status = () => {
                   value={carismaBonus}
                   onChange={(e) => setCarismaBonus(e.target.value)}
                 />
-              </>
+              </div>
             )}
 
             <p
@@ -601,7 +603,7 @@ export const Status = () => {
                 </div>
               </article>
               Salvaguarda
-              <>
+              <div>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -611,8 +613,8 @@ export const Status = () => {
                   />
                 </div>
                 Atuação
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -622,8 +624,8 @@ export const Status = () => {
                   />
                 </div>
                 Enganação
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -633,8 +635,8 @@ export const Status = () => {
                   />
                 </div>
                 Intimidação
-              </>
-              <>
+              </div>
+              <div className='linha_pericia salvaguarda_linha'>
                 <div>
                   <input
                     className='checkbox_proficiencia'
@@ -644,9 +646,9 @@ export const Status = () => {
                   />
                 </div>
                 Persuasão
-              </>
+              </div>
             </section>
-          </>
+          </div>
         </article>
       </section>
     </div>
