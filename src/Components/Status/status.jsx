@@ -143,7 +143,7 @@ export const Status = () => {
           </div>
           <div className='div_iniciativa'>
             <h4>Iniciativa</h4>
-            {bonusProficiencia}
+            {contarNumerosPares(destreza, destrezaBonus)}
           </div>
           <div className='div_iniciativa deslocamento'>
             <h4>Deslocamento</h4>

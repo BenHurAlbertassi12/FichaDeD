@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './title.css'
+import './title.css';
 
 export const Title = () => {
+  // Estados para armazenar os valores dos campos
   const [nome, setNome] = useState('');
   const [classeENivel, setClasseENivel] = useState('');
   const [antecedentes, setAntecedentes] = useState('');
@@ -10,6 +11,7 @@ export const Title = () => {
   const [tendencia, setTendencia] = useState('');
   const [pontosDeExperiencia, setPontosDeExperiencia] = useState('');
 
+  // Estados para controlar a visibilidade dos campos de entrada
   const [isVisibleName, setIsVisibleName] = useState(true);
   const [isVisibleClasseENivel, setIsVisibleClasseENivel] = useState(true);
   const [isVisibleAntecedentes, setIsVisibleAntecedentes] = useState(true);
@@ -19,6 +21,7 @@ export const Title = () => {
   const [isVisiblePontosDeExperiencia, setIsVisiblePontosDeExperiencia] =
     useState(true);
 
+  // Função para alternar a visibilidade dos campos
   const toggleVisibility = (field) => {
     switch (field) {
       case 'nome':
@@ -59,7 +62,7 @@ export const Title = () => {
           />
         )}
         <h1 className='h4_edit' onClick={() => toggleVisibility('nome')}>
-          {isVisibleName ? nome : nome}
+          {nome}
         </h1>
         <p className='p_edit'>Nome</p>
       </div>
@@ -77,11 +80,10 @@ export const Title = () => {
             <h4
               className='h4_edit'
               onClick={() => toggleVisibility('classeENivel')}>
-              {isVisibleClasseENivel ? classeENivel : classeENivel}
+              {classeENivel}
             </h4>
-            <hr className='hr_edit'/>
-            <hr className='hr_edit'/>
-            <p className='p_edit'>Classe e Nivel</p>
+            <hr className='hr_edit' />
+            <p className='p_edit'>Classe e Nível</p>
           </div>
           <div className='editar_nome'>
             {isVisibleAntecedentes && (
@@ -95,10 +97,9 @@ export const Title = () => {
             <h4
               className='h4_edit'
               onClick={() => toggleVisibility('antecedentes')}>
-              {isVisibleAntecedentes ? antecedentes : antecedentes}
+              {antecedentes}
             </h4>
-            <hr className='hr_edit'/>
-            <hr className='hr_edit'/>
+            <hr className='hr_edit' />
             <p className='p_edit'>Antecedentes</p>
           </div>
           <div className='editar_nome'>
@@ -113,10 +114,9 @@ export const Title = () => {
             <h4
               className='h4_edit'
               onClick={() => toggleVisibility('nomeDoJogador')}>
-              {isVisibleNomeDoJogador ? nomeDoJogador : nomeDoJogador}
+              {nomeDoJogador}
             </h4>
-            <hr className='hr_edit'/>
-            <hr className='hr_edit'/>
+            <hr className='hr_edit' />
             <p className='p_edit'>Nome do Jogador</p>
           </div>
         </div>
@@ -131,10 +131,9 @@ export const Title = () => {
               />
             )}
             <h4 className='h4_edit' onClick={() => toggleVisibility('raca')}>
-              {isVisibleRaca ? raca : raca}
+              {raca}
             </h4>
-            <hr className='hr_edit'/>
-            <hr className='hr_edit'/>
+            <hr className='hr_edit' />
             <p className='p_edit'>Raça</p>
           </div>
           <div className='editar_nome'>
@@ -149,10 +148,9 @@ export const Title = () => {
             <h4
               className='h4_edit'
               onClick={() => toggleVisibility('tendencia')}>
-              {isVisibleTendencia ? tendencia : tendencia}
+              {tendencia}
             </h4>
-            <hr className='hr_edit'/>
-            <hr className='hr_edit'/>
+            <hr className='hr_edit' />
             <p className='p_edit'>Tendência</p>
           </div>
           <div className='editar_nome'>
@@ -167,12 +165,9 @@ export const Title = () => {
             <h4
               className='h4_edit'
               onClick={() => toggleVisibility('pontosDeExperiencia')}>
-              {isVisiblePontosDeExperiencia
-                ? pontosDeExperiencia
-                : pontosDeExperiencia}
+              {pontosDeExperiencia}
             </h4>
-            <hr className='hr_edit'/>
-            <hr className='hr_edit'/>
+            <hr className='hr_edit' />
             <p className='p_edit'>Pontos de Experiência</p>
           </div>
         </div>
